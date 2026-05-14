@@ -212,8 +212,8 @@ export default function SubSolutionPage() {
                   <a href="tel:+96522XXXXXX" className="flex items-center gap-2 text-white text-sm font-medium hover:text-white/80 transition-colors">
                     <Phone className="w-4 h-4" /> +965 22612501
                   </a>
-                  <a href="mailto:info@imoukuwait.com" className="flex items-center gap-2 text-white text-sm font-medium hover:text-white/80 transition-colors">
-                    <Mail className="w-4 h-4" /> info@imoukuwait.com
+                  <a href="mailto:info@arabsecuritygulf.com" className="flex items-center gap-2 text-white text-sm font-medium hover:text-white/80 transition-colors">
+                    <Mail className="w-4 h-4" /> info@arabsecuritygulf.com
                   </a>
                 </div>
               </div>
