@@ -545,7 +545,6 @@ export const companyInfo = {
   },
 };
 
-
 export const stats = [
   { value: "1,200+", label: "Projects Completed" },
   { value: "500+", label: "Team Members" },
