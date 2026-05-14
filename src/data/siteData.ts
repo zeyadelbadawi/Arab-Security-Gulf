@@ -483,7 +483,7 @@ export const faqs: FAQ[] = [
   { question: "Do you offer maintenance and support services?", answer: "Yes, we offer comprehensive maintenance programs including 24/7 technical support, preventive maintenance schedules, emergency response, remote monitoring, and Annual Maintenance Contracts (AMC) for all installed systems.", category: "Support" },
   { question: "Can you integrate multiple security systems together?", answer: "Absolutely. System integration is one of our core competencies. We specialize in creating unified security platforms that integrate CCTV, access control, fire alarm, intrusion detection, and building management systems into a single, manageable interface.", category: "Solutions" },
   { question: "What certifications does ASG hold?", answer: "ASG holds multiple industry certifications including ISO 9001 Quality Management, ISO 45001 Occupational Health & Safety, and various vendor-specific certifications from our technology partners. We are also approved by Kuwait Fire Service Directorate (KFSD).", category: "General" },
-  { question: "How do I request a quote for a project?", answer: "You can request a quote by filling out our online quote request form, calling our sales team, or emailing us at info@arabsecuritygulf.com. Our team will respond within 24 hours with a preliminary assessment.", category: "Project" },
+  { question: "How do I request a quote for a project?", answer: "You can request a quote by filling out our online quote request form, calling our sales team, or emailing us at info@arab-security.com. Our team will respond within 24 hours with a preliminary assessment.", category: "Project" },
   { question: "Do you provide training for system operators?", answer: "Yes, we provide comprehensive training programs for system operators, administrators, and technical staff. We also offer vendor-specific certification courses and custom workshops tailored to your team's needs.", category: "Training" },
   { question: "What industries do you serve?", answer: "We serve a wide range of industries including government, oil & gas, banking, healthcare, education, hospitality, retail, transportation, industrial, residential, telecommunications, and sports & entertainment.", category: "General" },
   { question: "Can you handle large-scale projects?", answer: "Yes, we have extensive experience managing large-scale projects across Kuwait and the GCC region, from multi-site bank branch rollouts to mega-projects like airports, stadiums, and smart city developments.", category: "Project" },
@@ -536,7 +536,8 @@ export const companyInfo = {
     { city: "Dubai", country: "UAE", address: "Business Bay, Dubai", phone: "+971 4 XXX XXXX", type: "Regional Office" },
     { city: "Doha", country: "Qatar", address: "West Bay, Doha", phone: "+974 XXXX XXXX", type: "Regional Office" },
   ],
-  email: "info@arabsecuritygulf.com",
+  email: "info@arab-security.com",
+  
   socialMedia: {
     linkedin: "https://www.linkedin.com/company/arabsecurity/",
     facebook: "https://www.facebook.com/ASG.Gulf1",

@@ -7,7 +7,8 @@ import {
 import {
   ChevronRight, ArrowRight, CheckCircle2, MapPin, Phone, Mail,
   Calendar, Clock, Users, Star, Briefcase, Send, ChevronDown,
-  Building2, Award, Target, Heart, Shield, Globe, ExternalLink
+  Building2, Award, Target, Heart, Shield, Globe, ExternalLink,
+  Facebook, Instagram, Linkedin
 } from "lucide-react";
 import { useState } from "react";
 
@@ -1025,13 +1026,21 @@ export function ContactPage() {
               <div>
                 <h3 className="text-[#1B2A4A] font-bold text-sm uppercase tracking-wider mb-4">Follow Us</h3>
                 <div className="flex flex-wrap gap-3">
-                  {Object.entries(companyInfo.socialMedia).map(([platform, url]) => (
-                    <a key={platform} href={url} target="_blank" rel="noopener noreferrer"
-                      className="w-11 h-11 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#1B2A4A] hover:bg-[#fd6909] hover:border-[#fd6909] hover:text-white transition-all duration-300 shadow-sm"
-                      title={platform}>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  ))}
+                  <a href={companyInfo.socialMedia.facebook || "https://facebook.com/arabsecuritygulf"} target="_blank" rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#1B2A4A] hover:bg-[#fd6909] hover:border-[#fd6909] hover:text-white transition-all duration-300 shadow-sm"
+                    title="Facebook">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href={companyInfo.socialMedia.instagram || "https://instagram.com/arabsecuritygulf"} target="_blank" rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#1B2A4A] hover:bg-[#fd6909] hover:border-[#fd6909] hover:text-white transition-all duration-300 shadow-sm"
+                    title="Instagram">
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                  <a href={companyInfo.socialMedia.linkedin || "https://linkedin.com/company/arabsecuritygulf"} target="_blank" rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#1B2A4A] hover:bg-[#fd6909] hover:border-[#fd6909] hover:text-white transition-all duration-300 shadow-sm"
+                    title="LinkedIn">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
                 </div>
               </div>
             </div>
