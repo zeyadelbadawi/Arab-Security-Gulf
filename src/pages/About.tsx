@@ -323,7 +323,15 @@ export function ProjectsPage() {
 
 export function ProjectDetail() {
   const { slug } = useParams();
+  const [activeVideoTab, setActiveVideoTab] = useState<string | null>(null);
   const project = projects.find((p) => p.slug === slug);
+
+  const projectVideos = slug === "its-egypt-radar-smart-system" ? [
+    { id: "arabic", label: "Arabic Video", url: "https://imoukuwait.com/wp-content/uploads/2026/04/ASG-ITS-Solution-HQ.mp4" },
+    { id: "english", label: "English Video", url: "https://imoukuwait.com/wp-content/uploads/2026/04/ASG-ITS-Solution-HQENG.mp4" },
+    { id: "french", label: "French Video", url: "https://imoukuwait.com/wp-content/uploads/2026/04/ASG-ITS-Solution-HQFR.mp4" },
+  ] : [];
+
   if (!project) return <Navigate to="/projects" replace />;
   const relatedSolutions = solutions.filter((s) => project.solutions.includes(s.slug));
 
@@ -332,9 +340,9 @@ export function ProjectDetail() {
   const galleryImages = project.galleryImages && project.galleryImages.length > 0
     ? project.galleryImages
     : [
-      projectMainImage,
-      ...relatedSolutions.slice(0, 3).map((sol) => HERO_IMAGES[sol.slug as keyof typeof HERO_IMAGES] || HERO_IMAGES.solutions),
-    ];
+        projectMainImage,
+        ...relatedSolutions.slice(0, 3).map((sol) => HERO_IMAGES[sol.slug as keyof typeof HERO_IMAGES] || HERO_IMAGES.solutions),
+      ];
 
   return (
     <Layout>
@@ -379,6 +387,52 @@ export function ProjectDetail() {
                 ))}
               </div>
 
+              {/* Project Videos - only for ITS Egypt Radar */}
+              {projectVideos.length > 0 && (
+                <div className="mt-8 mb-8">
+                  <h3 className="text-xl font-bold text-[#1E2455] mb-4">Project Videos</h3>
+                  <div className="flex gap-2 mb-4">
+                    {projectVideos.map((v) => (
+                      <button
+                        key={v.id}
+                        onClick={() => setActiveVideoTab(activeVideoTab === v.id ? null : v.id)}
+                        className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${
+                          activeVideoTab === v.id
+                            ? "bg-[#fd6909] text-white shadow-lg shadow-[#fd6909]/25"
+                            : "bg-gray-100 text-[#1E2455] hover:bg-gray-200"
+                        }`}
+                      >
+                        {v.label}
+                      </button>
+                    ))}
+                  </div>
+                  {activeVideoTab && (
+                    <div className="rounded-xl overflow-hidden bg-black aspect-video">
+                      <video
+                        key={activeVideoTab}
+                        controls
+                        autoPlay
+                        className="w-full h-full"
+                        src={projectVideos.find((v) => v.id === activeVideoTab)?.url}
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  )}
+                  {!activeVideoTab && (
+                <div className="rounded-xl bg-gray-50 border border-gray-200 aspect-video flex items-center justify-center p-5">
+                <div className="text-center text-gray-400">
+                  <svg className="w-16 h-16 mx-auto mb-3 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <p className="text-sm font-medium">Select a language tab above to play the video</p>
+                </div>
+              </div>
+                  )}
+                </div>
+              )}
+
               <h3 className="text-xl font-bold text-[#1E2455] mt-8 mb-4">Solutions Deployed</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {relatedSolutions.map((sol) => (
@@ -422,6 +476,7 @@ export function ProjectDetail() {
     </Layout>
   );
 }
+
 
 /* ===== PARTNERS ===== */
 const partnerData: { name: string; logo: string; categories: string[]; description: string; website: string }[] = [
