@@ -332,9 +332,9 @@ export function ProjectDetail() {
   const galleryImages = project.galleryImages && project.galleryImages.length > 0
     ? project.galleryImages
     : [
-        projectMainImage,
-        ...relatedSolutions.slice(0, 3).map((sol) => HERO_IMAGES[sol.slug as keyof typeof HERO_IMAGES] || HERO_IMAGES.solutions),
-      ];
+      projectMainImage,
+      ...relatedSolutions.slice(0, 3).map((sol) => HERO_IMAGES[sol.slug as keyof typeof HERO_IMAGES] || HERO_IMAGES.solutions),
+    ];
 
   return (
     <Layout>
@@ -1179,11 +1179,10 @@ export function ContactPage() {
                   </div>
                   {submitStatus && (
                     <div
-                      className={`rounded-xl px-4 py-3 text-sm font-medium ${
-                        submitStatus.type === "success"
-                          ? "bg-green-50 text-green-700 border border-green-100"
-                          : "bg-red-50 text-red-700 border border-red-100"
-                      }`}
+                      className={`rounded-xl px-4 py-3 text-sm font-medium ${submitStatus.type === "success"
+                        ? "bg-green-50 text-green-700 border border-green-100"
+                        : "bg-red-50 text-red-700 border border-red-100"
+                        }`}
                     >
                       {submitStatus.message}
                     </div>
@@ -1307,15 +1306,16 @@ export function RequestQuotePage() {
           company: quoteData.company,
           solution: quoteData.solution,
           message: `
-Industry: ${quoteData.industry}
-Project Location: ${quoteData.location}
-Budget: ${quoteData.budget}
-
-Project Description:
-${quoteData.message}
+        Industry: ${quoteData.industry}
+        Project Location: ${quoteData.location}
+        Budget: ${quoteData.budget}
+        
+        Project Description:
+        ${quoteData.message}
           `.trim(),
-          type: "gulf-form",
-          sheetName: "GULF REQUEST QUOTE",        }),
+          type: "gulf-request-quote",
+          sheetName: "Gulf Request Quote",
+        }),
       });
 
       const data = await response.json().catch(() => ({}));
@@ -1473,11 +1473,10 @@ ${quoteData.message}
 
               {quoteStatus && (
                 <div
-                  className={`rounded-xl px-4 py-3 text-sm font-medium ${
-                    quoteStatus.type === "success"
-                      ? "bg-green-50 text-green-700 border border-green-100"
-                      : "bg-red-50 text-red-700 border border-red-100"
-                  }`}
+                  className={`rounded-xl px-4 py-3 text-sm font-medium ${quoteStatus.type === "success"
+                    ? "bg-green-50 text-green-700 border border-green-100"
+                    : "bg-red-50 text-red-700 border border-red-100"
+                    }`}
                 >
                   {quoteStatus.message}
                 </div>
