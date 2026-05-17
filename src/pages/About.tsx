@@ -993,7 +993,7 @@ export function ContactPage() {
       </section>
 
       {/* Contact Info Cards - Floating over map transition */}
-      <section className="relative -mt-20 z-10 pb-8">
+      <section className="relative -mt-20 z-10 xpb-8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Location Card */}
@@ -1268,43 +1268,229 @@ export function PartnerWithUsPage() {
 
 /* ===== REQUEST QUOTE ===== */
 export function RequestQuotePage() {
+  const [quoteData, setQuoteData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    solution: "",
+    industry: "",
+    location: "",
+    message: "",
+    budget: "",
+  });
+
+  const [isSubmittingQuote, setIsSubmittingQuote] = useState(false);
+  const [quoteStatus, setQuoteStatus] = useState<null | { type: "success" | "error"; message: string }>(null);
+
+  const handleQuoteChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setQuoteData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleQuoteSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setIsSubmittingQuote(true);
+    setQuoteStatus(null);
+
+    try {
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: quoteData.name,
+          email: quoteData.email,
+          phone: quoteData.phone,
+          company: quoteData.company,
+          solution: quoteData.solution,
+          message: `
+Industry: ${quoteData.industry}
+Project Location: ${quoteData.location}
+Budget: ${quoteData.budget}
+
+Project Description:
+${quoteData.message}
+          `.trim(),
+          type: "gulf-form",
+          sheetName: "gulf form",
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to submit quote request");
+      }
+
+      setQuoteStatus({
+        type: "success",
+        message: "Quote request submitted successfully.",
+      });
+
+      setQuoteData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        solution: "",
+        industry: "",
+        location: "",
+        message: "",
+        budget: "",
+      });
+    } catch (error) {
+      setQuoteStatus({
+        type: "error",
+        message: error instanceof Error ? error.message : "Failed to submit quote request",
+      });
+    } finally {
+      setIsSubmittingQuote(false);
+    }
+  };
+
   return (
     <Layout>
-      <PageHero title="Request a Quote" subtitle="Get a customized quote for your security and technology project."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Request a Quote" }]} image={HERO_IMAGES["request-quote"]} />
+      <PageHero
+        title="Request a Quote"
+        subtitle="Get a customized quote for your security and technology project."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Request a Quote" }]}
+        image={HERO_IMAGES["request-quote"]}
+      />
+
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-6">
           <div className="bg-white rounded-2xl border border-gray-100 p-8">
             <h2 className="text-2xl font-black text-[#1E2455] mb-6">Project Details</h2>
-            <form className="space-y-5">
+
+            <form onSubmit={handleQuoteSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input type="text" placeholder="Full Name *" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm" />
-                <input type="text" placeholder="Company Name *" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm" />
+                <input
+                  type="text"
+                  name="name"
+                  value={quoteData.name}
+                  onChange={handleQuoteChange}
+                  placeholder="Full Name *"
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm"
+                />
+
+                <input
+                  type="text"
+                  name="company"
+                  value={quoteData.company}
+                  onChange={handleQuoteChange}
+                  placeholder="Company Name *"
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm"
+                />
               </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input type="email" placeholder="Email Address *" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm" />
-                <input type="tel" placeholder="Phone Number *" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm" />
+                <input
+                  type="email"
+                  name="email"
+                  value={quoteData.email}
+                  onChange={handleQuoteChange}
+                  placeholder="Email Address *"
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm"
+                />
+
+                <input
+                  type="tel"
+                  name="phone"
+                  value={quoteData.phone}
+                  onChange={handleQuoteChange}
+                  placeholder="Phone Number *"
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm"
+                />
               </div>
-              <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm text-gray-500">
-                <option>Select Solution Category *</option>
-                {solutions.map((s) => <option key={s.id} value={s.id}>{s.title}</option>)}
+
+              <select
+                name="solution"
+                value={quoteData.solution}
+                onChange={handleQuoteChange}
+                required
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm text-gray-500"
+              >
+                <option value="">Select Solution Category *</option>
+                {solutions.map((s) => (
+                  <option key={s.id} value={s.title}>
+                    {s.title}
+                  </option>
+                ))}
               </select>
-              <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm text-gray-500">
-                <option>Select Industry *</option>
-                {industries.map((i) => <option key={i.id} value={i.id}>{i.title}</option>)}
+
+              <select
+                name="industry"
+                value={quoteData.industry}
+                onChange={handleQuoteChange}
+                required
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm text-gray-500"
+              >
+                <option value="">Select Industry *</option>
+                {industries.map((i) => (
+                  <option key={i.id} value={i.title}>
+                    {i.title}
+                  </option>
+                ))}
               </select>
-              <input type="text" placeholder="Project Location" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm" />
-              <textarea rows={5} placeholder="Project Description - Please provide details about your requirements, scope, and timeline." className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm resize-none" />
-              <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm text-gray-500">
-                <option>Estimated Budget Range</option>
-                <option>Under $50,000</option>
-                <option>$50,000 - $100,000</option>
-                <option>$100,000 - $500,000</option>
-                <option>$500,000 - $1,000,000</option>
-                <option>Over $1,000,000</option>
+
+              <input
+                type="text"
+                name="location"
+                value={quoteData.location}
+                onChange={handleQuoteChange}
+                placeholder="Project Location"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm"
+              />
+
+              <textarea
+                rows={5}
+                name="message"
+                value={quoteData.message}
+                onChange={handleQuoteChange}
+                placeholder="Project Description - Please provide details about your requirements, scope, and timeline."
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm resize-none"
+              />
+
+              <select
+                name="budget"
+                value={quoteData.budget}
+                onChange={handleQuoteChange}
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#fd6909] focus:ring-1 focus:ring-[#fd6909] outline-none text-sm text-gray-500"
+              >
+                <option value="">Estimated Budget Range</option>
+                <option value="Under $50,000">Under $50,000</option>
+                <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+                <option value="$100,000 - $500,000">$100,000 - $500,000</option>
+                <option value="$500,000 - $1,000,000">$500,000 - $1,000,000</option>
+                <option value="Over $1,000,000">Over $1,000,000</option>
               </select>
-              <button type="submit" className="w-full bg-[#fd6909] text-white py-4 rounded-xl font-bold text-sm hover:bg-[#e55d00] transition-colors flex items-center justify-center gap-2">
-                Submit Quote Request <ArrowRight className="w-4 h-4" />
+
+              {quoteStatus && (
+                <div
+                  className={`rounded-xl px-4 py-3 text-sm font-medium ${
+                    quoteStatus.type === "success"
+                      ? "bg-green-50 text-green-700 border border-green-100"
+                      : "bg-red-50 text-red-700 border border-red-100"
+                  }`}
+                >
+                  {quoteStatus.message}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmittingQuote}
+                className="w-full bg-[#fd6909] text-white py-4 rounded-xl font-bold text-sm hover:bg-[#e55d00] transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                {isSubmittingQuote ? "Submitting..." : "Submit Quote Request"}
+                <ArrowRight className="w-4 h-4" />
               </button>
             </form>
           </div>
