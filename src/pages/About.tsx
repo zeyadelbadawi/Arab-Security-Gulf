@@ -453,11 +453,11 @@ export function ProjectDetail() {
                   <h3 className="text-lg font-bold text-white mb-3">Contact Our Experties</h3>
                   <p className="text-white/70 text-sm mb-4">Reach out to our team for expert guidance.</p>
                   <a
-                    href="tel:+201093006001"
+                    href="tel:+96598850714"
                     className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition-colors"
                   >
-                    <span className="text-2xl" role="img" aria-label="Egypt flag">🇪🇬</span>
-                    <span className="text-white font-bold text-lg tracking-wide">(+20) 109 300 6001</span>
+                    <span className="text-2xl" role="img" aria-label="Egypt flag">🇰🇼</span>
+                    <span className="text-white font-bold text-lg tracking-wide">(+965) 9885 0714</span>
                   </a>
                 </div>
               )}
