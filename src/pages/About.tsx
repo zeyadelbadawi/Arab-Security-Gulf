@@ -918,6 +918,57 @@ export function CareersPage() {
 /* ===== CONTACT ===== */
 export function ContactPage() {
   const headquarters = companyInfo.offices.find((o) => o.type === "Headquarters");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    solution: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<null | { type: "success" | "error"; message: string }>(null);
+
+  const handleContactChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleContactSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          type: "gulf-form",
+          sheetName: "gulf form",
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to submit form");
+      }
+
+      setSubmitStatus({ type: "success", message: "Your message has been sent successfully." });
+      setFormData({ name: "", email: "", phone: "", company: "", solution: "", message: "" });
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: error instanceof Error ? error.message : "Failed to submit form",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <Layout>
@@ -1051,46 +1102,99 @@ export function ContactPage() {
                 <h3 className="text-xl font-bold text-[#1B2A4A] mb-1">Send Us a Message</h3>
                 <p className="text-gray-400 text-sm mb-8">Fill in the form below and we&apos;ll get back to you shortly.</p>
 
-                <form className="space-y-5">
+                <form className="space-y-5" onSubmit={handleContactSubmit}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Full Name</label>
-                      <input type="text" placeholder="John Doe"
-                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all" />
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleContactChange}
+                        placeholder="John Doe"
+                        required
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all"
+                      />
                     </div>
                     <div>
                       <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Email</label>
-                      <input type="email" placeholder="john@company.com"
-                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all" />
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleContactChange}
+                        placeholder="john@company.com"
+                        required
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all"
+                      />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Phone</label>
-                      <input type="tel" placeholder="+965 XXXX XXXX"
-                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all" />
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleContactChange}
+                        placeholder="+965 XXXX XXXX"
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all"
+                      />
                     </div>
                     <div>
                       <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Company</label>
-                      <input type="text" placeholder="Your Company"
-                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all" />
+                      <input
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleContactChange}
+                        placeholder="Your Company"
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all"
+                      />
                     </div>
                   </div>
                   <div>
                     <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Solution Interest</label>
-                    <select className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm text-gray-500 transition-all">
-                      <option>Select a Solution</option>
-                      {solutions.map((s) => <option key={s.id} value={s.id}>{s.title}</option>)}
+                    <select
+                      name="solution"
+                      value={formData.solution}
+                      onChange={handleContactChange}
+                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm text-gray-500 transition-all"
+                    >
+                      <option value="">Select a Solution</option>
+                      {solutions.map((s) => <option key={s.id} value={s.title}>{s.title}</option>)}
                     </select>
                   </div>
                   <div>
                     <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Message</label>
-                    <textarea rows={5} placeholder="Tell us about your project requirements..."
-                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm resize-none transition-all" />
+                    <textarea
+                      rows={5}
+                      name="message"
+                      value={formData.message}
+                      onChange={handleContactChange}
+                      placeholder="Tell us about your project requirements..."
+                      required
+                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm resize-none transition-all"
+                    />
                   </div>
-                  <button type="submit"
-                    className="w-full bg-gradient-to-r from-[#fd6909] to-[#ff8c3a] text-white py-4 rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-[#fd6909]/25 transition-all duration-300 flex items-center justify-center gap-2 group">
-                    Send Message
+                  {submitStatus && (
+                    <div
+                      className={`rounded-xl px-4 py-3 text-sm font-medium ${
+                        submitStatus.type === "success"
+                          ? "bg-green-50 text-green-700 border border-green-100"
+                          : "bg-red-50 text-red-700 border border-red-100"
+                      }`}
+                    >
+                      {submitStatus.message}
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-[#fd6909] to-[#ff8c3a] text-white py-4 rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-[#fd6909]/25 transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </form>

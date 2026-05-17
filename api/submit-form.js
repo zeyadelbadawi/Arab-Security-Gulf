@@ -47,11 +47,9 @@ Q7shvPdald8b7asNmRZfow0q
 
   try {
 
-    const { name, phone, email, company, service, solution, message, type } = req.body
-
+    const { name, phone, email, company, service, solution, message, type, sheetName } = req.body
     // Determine sheet name based on submission type
-    const SHEET_NAME = type === "newsletter" ? "Newsletter" : "Contact Form"
-
+    const SHEET_NAME = sheetName || (type === "newsletter" ? "Newsletter" : "Contact Form")
     // Validate required fields based on submission type
     if (type === "newsletter") {
       if (!email) {

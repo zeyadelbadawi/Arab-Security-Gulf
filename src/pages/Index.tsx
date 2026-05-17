@@ -96,7 +96,7 @@ function HeroSection() {
       ctaLink: "/solutions/smart-intelligent-solutions",
     },
     {
-      title: "20+ Years of",
+      title: "15+ Years of",
       highlight: "Trusted Excellence",
       subtitle: "1,200+ projects completed across 6 countries with 59+ global technology partners.",
       cta: "View Projects",
@@ -197,7 +197,7 @@ function HeroSection() {
           {[
             { value: "1,200+", label: "Projects", icon: <Building2 className="w-5 h-5" /> },
             { value: "59+", label: "Partners", icon: <Handshake className="w-5 h-5" /> },
-            { value: "20+", label: "Years", icon: <Award className="w-5 h-5" /> },
+            { value: "15+", label: "Years", icon: <Award className="w-5 h-5" /> },
             { value: "24/7", label: "Support", icon: <Headphones className="w-5 h-5" /> },
           ].map((stat, i) => (
             <div

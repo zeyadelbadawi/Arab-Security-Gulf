@@ -550,12 +550,12 @@ export const stats = [
   { value: "500+", label: "Team Members" },
   { value: "59+", label: "Technology Partners" },
   { value: "6", label: "Countries Served" },
-  { value: "20+", label: "Years Experience" },
+  { value: "15+", label: "Years Experience" },
   { value: "24/7", label: "Support Available" },
 ];
 
 export const whyChooseUs = [
-  { title: "20+ Years of Excellence", description: "Two decades of proven expertise in security systems integration across Kuwait and the GCC region.", icon: "Award" },
+  { title: "15+ Years of Excellence", description: "Two decades of proven expertise in security systems integration across Kuwait and the GCC region.", icon: "Award" },
   { title: "End-to-End Solutions", description: "From consultation and design through installation, commissioning, and ongoing maintenance.", icon: "Workflow" },
   { title: "59+ Technology Partners", description: "Strategic partnerships with the world's leading security and technology manufacturers.", icon: "Handshake" },
   { title: "Certified Professionals", description: "Our team holds multiple industry certifications and vendor-specific qualifications.", icon: "BadgeCheck" },
