@@ -48,8 +48,10 @@ Q7shvPdald8b7asNmRZfow0q
   try {
 
     const { name, phone, email, company, service, solution, message, type, sheetName } = req.body
+
     // Determine sheet name based on submission type
     const SHEET_NAME = sheetName || (type === "newsletter" ? "Newsletter" : "Contact Form")
+
     // Validate required fields based on submission type
     if (type === "newsletter") {
       if (!email) {
@@ -152,26 +154,44 @@ Q7shvPdald8b7asNmRZfow0q
       range = `${SHEET_NAME}!A:B`
     } else {
       headers = [
+
         "Timestamp",
+
         "Name",
+
         "Email",
+
         "Phone",
+
         "Company",
+
+        "Service",
+
         "Solution",
+
         "Message",
+
       ]
-      
-      
       values = [[
+
         timestamp,
+
         name,
+
         email,
+
         phone || "",
+
         company || "",
+
+        service || "",
+
         solution || "",
-        message,
+
+        message
+
       ]]
-      range = `${SHEET_NAME}!A:G`
+      range = `${SHEET_NAME}!A:H`
     }
 
     // Create headers if sheet is empty
