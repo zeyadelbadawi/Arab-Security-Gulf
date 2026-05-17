@@ -152,44 +152,26 @@ Q7shvPdald8b7asNmRZfow0q
       range = `${SHEET_NAME}!A:B`
     } else {
       headers = [
-
         "Timestamp",
-
         "Name",
-
         "Email",
-
         "Phone",
-
         "Company",
-
-        "Service",
-
         "Solution",
-
         "Message",
-
       ]
+      
+      
       values = [[
-
         timestamp,
-
         name,
-
         email,
-
         phone || "",
-
         company || "",
-
-        service || "",
-
         solution || "",
-
-        message
-
+        message,
       ]]
-      range = `${SHEET_NAME}!A:H`
+      range = `${SHEET_NAME}!A:G`
     }
 
     // Create headers if sheet is empty
