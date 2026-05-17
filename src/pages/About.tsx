@@ -321,9 +321,38 @@ export function ProjectsPage() {
   );
 }
 
+/* ===== VIDEO MODAL COMPONENT ===== */
+function VideoModal({ url, label, onClose }: { url: string; label: string; onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm" onClick={onClose}>
+      <div className="relative w-full max-w-4xl mx-4" onClick={(e) => e.stopPropagation()}>
+        <button
+          onClick={onClose}
+          className="absolute -top-10 right-0 text-white hover:text-[#fd6909] transition-colors text-sm font-semibold flex items-center gap-1"
+        >
+          Close ✕
+        </button>
+        <div className="rounded-xl overflow-hidden bg-black shadow-2xl">
+          <video
+            autoPlay
+            controls
+            className="w-full aspect-video"
+            src={url}
+          >
+            Your browser does not support the video tag.
+          </video>
+          <div className="bg-[#1E2455] px-4 py-2">
+            <span className="text-white font-semibold text-sm">{label}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function ProjectDetail() {
   const { slug } = useParams();
-  const [activeVideoTab, setActiveVideoTab] = useState<string | null>(null);
+
   const project = projects.find((p) => p.slug === slug);
 
   const projectVideos = slug === "its-egypt-radar-smart-system" ? [
@@ -331,6 +360,8 @@ export function ProjectDetail() {
     { id: "english", label: "English Video", url: "https://imoukuwait.com/wp-content/uploads/2026/04/ASG-ITS-Solution-HQENG.mp4" },
     { id: "french", label: "French Video", url: "https://imoukuwait.com/wp-content/uploads/2026/04/ASG-ITS-Solution-HQFR.mp4" },
   ] : [];
+
+  const [playingVideo, setPlayingVideo] = useState<{ id: string; label: string; url: string } | null>(null);
 
   if (!project) return <Navigate to="/projects" replace />;
   const relatedSolutions = solutions.filter((s) => project.solutions.includes(s.slug));
@@ -387,52 +418,6 @@ export function ProjectDetail() {
                 ))}
               </div>
 
-              {/* Project Videos - only for ITS Egypt Radar */}
-              {projectVideos.length > 0 && (
-                <div className="mt-8 mb-8">
-                  <h3 className="text-xl font-bold text-[#1E2455] mb-4">Project Videos</h3>
-                  <div className="flex gap-2 mb-4">
-                    {projectVideos.map((v) => (
-                      <button
-                        key={v.id}
-                        onClick={() => setActiveVideoTab(activeVideoTab === v.id ? null : v.id)}
-                        className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${
-                          activeVideoTab === v.id
-                            ? "bg-[#fd6909] text-white shadow-lg shadow-[#fd6909]/25"
-                            : "bg-gray-100 text-[#1E2455] hover:bg-gray-200"
-                        }`}
-                      >
-                        {v.label}
-                      </button>
-                    ))}
-                  </div>
-                  {activeVideoTab && (
-                    <div className="rounded-xl overflow-hidden bg-black aspect-video">
-                      <video
-                        key={activeVideoTab}
-                        controls
-                        autoPlay
-                        className="w-full h-full"
-                        src={projectVideos.find((v) => v.id === activeVideoTab)?.url}
-                      >
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                  )}
-                  {!activeVideoTab && (
-                <div className="rounded-xl bg-gray-50 border border-gray-200 aspect-video flex items-center justify-center p-5">
-                <div className="text-center text-gray-400">
-                  <svg className="w-16 h-16 mx-auto mb-3 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <p className="text-sm font-medium">Select a language tab above to play the video</p>
-                </div>
-              </div>
-                  )}
-                </div>
-              )}
-
               <h3 className="text-xl font-bold text-[#1E2455] mt-8 mb-4">Solutions Deployed</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {relatedSolutions.map((sol) => (
@@ -471,6 +456,47 @@ export function ProjectDetail() {
               </div>
             </div>
           </div>
+
+          {/* Project Videos - Full Width Section */}
+          {projectVideos.length > 0 && (
+            <div className="mt-12">
+              <h3 className="text-xl font-bold text-[#1E2455] mb-4">Project Videos</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {projectVideos.map((v) => (
+                  <button
+                    key={v.id}
+                    onClick={() => setPlayingVideo(v)}
+                    className="group bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#fd6909]/20 hover:shadow-md transition-all text-left flex flex-col h-full"
+                  >
+                    <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black mb-4">
+                      <video
+                        preload="metadata"
+                        className="w-full h-full object-cover"
+                        src={`${v.url}#t=2`}
+                        muted
+                        playsInline
+                      />
+                      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/15 transition-colors duration-200" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-14 h-14 rounded-full bg-[#fd6909] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                          <svg className="w-6 h-6 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <h4 className="font-bold text-[#1E2455] group-hover:text-[#fd6909] transition-colors">{v.label}</h4>
+                    <p className="text-gray-500 text-sm mt-1">Click to play video</p>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Video Modal */}
+          {playingVideo && (
+            <VideoModal url={playingVideo.url} label={playingVideo.label} onClose={() => setPlayingVideo(null)} />
+          )}
         </div>
       </section>
     </Layout>
