@@ -1315,8 +1315,7 @@ Project Description:
 ${quoteData.message}
           `.trim(),
           type: "gulf-form",
-          sheetName: "gulf form",
-        }),
+          sheetName: "GULF REQUEST QUOTE",        }),
       });
 
       const data = await response.json().catch(() => ({}));
