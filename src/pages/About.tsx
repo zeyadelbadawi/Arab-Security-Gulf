@@ -341,7 +341,7 @@ function VideoModal({ url, label, onClose }: { url: string; label: string; onClo
           >
             Your browser does not support the video tag.
           </video>
-          <div className="bg-[#1E2455] px-4 py-2">
+          <div className="bg-[#fd6909] px-4 py-2">
             <span className="text-white font-semibold text-sm">{label}</span>
           </div>
         </div>
