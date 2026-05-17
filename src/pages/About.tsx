@@ -357,8 +357,8 @@ export function ProjectDetail() {
 
   const projectVideos = slug === "its-egypt-radar-smart-system" ? [
     { id: "arabic", label: "Arabic Video", url: "https://imoukuwait.com/wp-content/uploads/2026/04/ASG-ITS-Solution-HQ.mp4" },
-    { id: "english", label: "English Video", url: "https://imoukuwait.com/wp-content/uploads/2026/04/ASG-ITS-Solution-HQENG.mp4" },
-    { id: "french", label: "French Video", url: "https://imoukuwait.com/wp-content/uploads/2026/04/ASG-ITS-Solution-HQFR.mp4" },
+    { id: "english", label: "English Video", url: "https://imoukuwait.com/wp-content/uploads/2026/05/ASG-English-Final.mp4" },
+    { id: "french", label: "French Video", url: "https://imoukuwait.com/wp-content/uploads/2026/05/ASG-French-Final.mp4" },
   ] : [];
 
   const [playingVideo, setPlayingVideo] = useState<{ id: string; label: string; url: string } | null>(null);
@@ -447,6 +447,20 @@ export function ProjectDetail() {
                   ))}
                 </div>
               </div>
+              {/* Contact Our Experties - Only for ITS Egypt project */}
+              {slug === "its-egypt-radar-smart-system" && (
+                <div className="bg-[#1E2455] rounded-2xl p-6">
+                  <h3 className="text-lg font-bold text-white mb-3">Contact Our Experties</h3>
+                  <p className="text-white/70 text-sm mb-4">Reach out to our team for expert guidance.</p>
+                  <a
+                    href="tel:+201093006001"
+                    className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition-colors"
+                  >
+                    <span className="text-2xl" role="img" aria-label="Egypt flag">🇪🇬</span>
+                    <span className="text-white font-bold text-lg tracking-wide">(+20) 109 300 6001</span>
+                  </a>
+                </div>
+              )}
               <div className="bg-[#fd6909] rounded-2xl p-6">
                 <h3 className="text-lg font-bold text-white mb-2">Start Your Project</h3>
                 <p className="text-white/80 text-sm mb-4">Get a free consultation for your project.</p>
@@ -454,6 +468,8 @@ export function ProjectDetail() {
                   Request a Quote
                 </Link>
               </div>
+
+              
             </div>
           </div>
 
