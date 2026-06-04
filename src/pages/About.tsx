@@ -1300,6 +1300,122 @@ export function ContactPage() {
         </div>
       </section>
 
+      <section className="relative -mt-20 z-10 pb-10">
+      <div className="max-w-7xl mx-auto px-6">
+<br></br> <br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+</div>
+</section>
+
+<section className="relative -mt-20 z-10 pb-10">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+      {/* Distribution Sector */}
+      <div className="group bg-white rounded-3xl overflow-hidden shadow-xl shadow-black/5 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+      <div className="bg-gradient-to-r from-[#1B2A4A] to-[#2d4270] p-6">
+      <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-4">
+            <Truck className="w-7 h-7 text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-white">Distribution Sector</h3>
+          <p className="text-white/80 text-sm mt-1">Sales & distribution contacts</p>
+        </div>
+
+        <div className="p-6 space-y-4">
+          {[
+            ["Doaa Hassan", "0096598850719", "doaa@arab-security.com"],
+            ["Ahmed Gamal", "0096567645862", "sales@arab-security.com"],
+            ["Ahmed Wafay", "0096594964124", "a.waffay@arab-security.com"],
+          ].map(([name, phone, email]) => (
+            <div key={email} className="p-4 rounded-2xl bg-gray-50 border border-gray-100">
+              <h4 className="font-bold text-[#1B2A4A] mb-2">{name}</h4>
+
+              <a href={`tel:${phone}`} className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#fd6909]">
+                <Phone className="w-4 h-4" />
+                {phone}
+              </a>
+
+              <a href={`mailto:${email}`} className="flex items-center gap-2 text-sm text-[#fd6909] hover:underline mt-1 break-all">
+                <Mail className="w-4 h-4" />
+                {email}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+      {/* Projects Sector */}
+      <div className="group bg-white rounded-3xl overflow-hidden shadow-xl shadow-black/5 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+      <div className="bg-gradient-to-r from-[#1B2A4A] to-[#2d4270] p-6">
+      <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-4">
+            <Briefcase className="w-7 h-7 text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-white">Projects Sector</h3>
+          <p className="text-white/80 text-sm mt-1">Project management contacts</p>
+        </div>
+
+        <div className="p-6 space-y-4">
+          {[
+            ["Tarnim Abouzeid", "+96590925367", "tarnim@arab-security.com"],
+            ["Hisham Mohamed", "+96555616101", "ahmed.fatahalla@arab-security.com"],
+            ["Hussain Elbeblawy", "+96596701447", "hussain@arab-security.com"],
+          ].map(([name, phone, email]) => (
+            <div key={email} className="p-4 rounded-2xl bg-gray-50 border border-gray-100">
+              <h4 className="font-bold text-[#1B2A4A] mb-2">{name}</h4>
+
+              <a href={`tel:${phone}`} className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#fd6909]">
+                <Phone className="w-4 h-4" />
+                {phone}
+              </a>
+
+              <a href={`mailto:${email}`} className="flex items-center gap-2 text-sm text-[#fd6909] hover:underline mt-1 break-all">
+                <Mail className="w-4 h-4" />
+                {email}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* Governmental Sector */}
+      <div className="group bg-white rounded-3xl overflow-hidden shadow-xl shadow-black/5 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+        <div className="bg-gradient-to-r from-[#1B2A4A] to-[#2d4270] p-6">
+          <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-4">
+            <Building2 className="w-7 h-7 text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-white">Governmental Sector</h3>
+          <p className="text-white/80 text-sm mt-1">Government sector contacts</p>
+        </div>
+
+        <div className="p-6 space-y-4">
+          {[
+            ["Mahmoud Ramez", "0096597716260", "m.ramez@arab-security.com"],
+            ["Hisham Mohamed", "0096555616101", "hisham.mohamed@arab-security.com"],
+          ].map(([name, phone, email]) => (
+            <div key={email} className="p-4 rounded-2xl bg-gray-50 border border-gray-100">
+              <h4 className="font-bold text-[#1B2A4A] mb-2">{name}</h4>
+
+              <a href={`tel:${phone}`} className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#fd6909]">
+                <Phone className="w-4 h-4" />
+                {phone}
+              </a>
+
+              <a href={`mailto:${email}`} className="flex items-center gap-2 text-sm text-[#fd6909] hover:underline mt-1 break-all">
+                <Mail className="w-4 h-4" />
+                {email}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
       {/* CTA Banner */}
       <section className="bg-[#1B2A4A] py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
