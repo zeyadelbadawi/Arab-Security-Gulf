@@ -1326,9 +1326,9 @@ export function ContactPage() {
 
         <div className="p-6 space-y-4">
           {[
-            ["Doaa Hassan", "0096598850719", "doaa@arab-security.com"],
-            ["Ahmed Gamal", "0096567645862", "sales@arab-security.com"],
-            ["Ahmed Wafay", "0096594964124", "a.waffay@arab-security.com"],
+            ["Doaa Hassan", "+96598850719", "doaa@arab-security.com"],
+            ["Ahmed Gamal", "+96567645862", "sales@arab-security.com"],
+            ["Ahmed Wafay", "+96594964124", "a.waffay@arab-security.com"],
           ].map(([name, phone, email]) => (
             <div key={email} className="p-4 rounded-2xl bg-gray-50 border border-gray-100">
               <h4 className="font-bold text-[#1B2A4A] mb-2">{name}</h4>
@@ -1392,8 +1392,8 @@ export function ContactPage() {
 
         <div className="p-6 space-y-4">
           {[
-            ["Mahmoud Ramez", "0096597716260", "m.ramez@arab-security.com"],
-            ["Hisham Mohamed", "0096555616101", "hisham.mohamed@arab-security.com"],
+            ["Mahmoud Ramez", "+96597716260", "m.ramez@arab-security.com"],
+            ["Hisham Mohamed", "+96555616101", "hisham.mohamed@arab-security.com"],
           ].map(([name, phone, email]) => (
             <div key={email} className="p-4 rounded-2xl bg-gray-50 border border-gray-100">
               <h4 className="font-bold text-[#1B2A4A] mb-2">{name}</h4>
