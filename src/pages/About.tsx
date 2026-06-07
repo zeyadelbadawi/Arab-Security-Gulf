@@ -1208,7 +1208,7 @@ export function ContactPage() {
                         name="name"
                         value={formData.name}
                         onChange={handleContactChange}
-                        placeholder="John Doe"
+                        placeholder="Enter Your Name"
                         required
                         className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all"
                       />
@@ -1220,7 +1220,7 @@ export function ContactPage() {
                         name="email"
                         value={formData.email}
                         onChange={handleContactChange}
-                        placeholder="john@company.com"
+                        placeholder="infoegypt@arab-security.com"
                         required
                         className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all"
                       />
