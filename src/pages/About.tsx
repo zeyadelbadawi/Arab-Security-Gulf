@@ -362,7 +362,38 @@ export function ProjectDetail() {
   ] : [];
 
   const [playingVideo, setPlayingVideo] = useState<{ id: string; label: string; url: string } | null>(null);
+const isVideoUrl = (url: string) => {
+  return /\.(mp4|webm|ogg)(\?.*)?$/i.test(url);
+};
 
+const renderGalleryItem = (
+  url: string,
+  index: number,
+  isMain = false
+) => {
+  const title = `${project?.title || "Project"} - ${index + 1}`;
+
+  if (isVideoUrl(url)) {
+    return (
+      <video
+        src={url}
+        controls
+        playsInline
+        preload="metadata"
+        className="w-full h-full object-cover"
+      />
+    );
+  }
+
+  return (
+    <img
+      src={url}
+      alt={title}
+      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+      loading="lazy"
+    />
+  );
+};
   if (!project) return <Navigate to="/projects" replace />;
   const relatedSolutions = solutions.filter((s) => project.solutions.includes(s.slug));
 
@@ -406,18 +437,20 @@ export function ProjectDetail() {
               )}
 
               {/* Project Gallery */}
-              <h3 className="text-xl font-bold text-[#1E2455] mt-8 mb-4">Project Gallery</h3>
-              <div className="grid grid-cols-2 gap-3 mb-8">
-                <div className="col-span-2 rounded-xl overflow-hidden h-64">
-                  <img src={galleryImages[0]} alt={`${project.title} - Main`} className="w-full h-full object-cover" loading="lazy" />
-                </div>
-                {galleryImages.slice(1).map((img, idx) => (
-                  <div key={idx} className="rounded-xl overflow-hidden h-40">
-                    <img src={img} alt={`${project.title} - ${idx + 2}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-                  </div>
-                ))}
-              </div>
+<h3 className="text-xl font-bold text-[#1E2455] mt-8 mb-4">Project Gallery</h3>
 
+<div className="grid grid-cols-2 gap-3 mb-8">
+  {galleryImages[0] && (
+    <div className="col-span-2 rounded-xl overflow-hidden bg-black">      {renderGalleryItem(galleryImages[0], 0, true)}
+    </div>
+  )}
+
+  {galleryImages.slice(1).map((item, idx) => (
+    <div key={idx} className="rounded-xl overflow-hidden h-40 bg-black">
+      {renderGalleryItem(item, idx + 1)}
+    </div>
+  ))}
+</div>
               <h3 className="text-xl font-bold text-[#1E2455] mt-8 mb-4">Solutions Deployed</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {relatedSolutions.map((sol) => (
