@@ -1253,7 +1253,7 @@ export function ContactPage() {
                         name="email"
                         value={formData.email}
                         onChange={handleContactChange}
-                        placeholder="infoegypt@arab-security.com"
+                        placeholder="Enter Your Email"
                         required
                         className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all"
                       />
