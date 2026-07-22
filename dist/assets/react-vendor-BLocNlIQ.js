@@ -1,0 +1,1 @@
+import"./router-vendor-D7Cu2Gta.js";

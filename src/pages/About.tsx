@@ -2,13 +2,13 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import {
   companyInfo, industries, projects, partners, faqs, trainingSessions,
-  newsItems, solutions, services, stats, HERO_IMAGES, PROJECT_IMAGES, getIndustryHeroImage
+  newsItems, solutions, services, stats, HERO_IMAGES, PROJECT_IMAGES, getIndustryHeroImage, events
 } from "@/data/siteData";
 import {
   ChevronRight, ArrowRight, CheckCircle2, MapPin, Phone, Mail,
   Calendar, Clock, Users, Star, Briefcase, Send, ChevronDown,
   Building2, Award, Target, Heart, Shield, Globe, ExternalLink,
-  Facebook, Instagram, Linkedin, Truck
+  Facebook, Instagram, Linkedin, Truck, MapPinIcon, Share2, Download
 } from "lucide-react";
 import { useState } from "react";
 
@@ -263,6 +263,242 @@ export function IndustryDetail() {
   );
 }
 
+/* ===== EVENT DETAIL PAGE ===== */
+export function EventDetail() {
+  const { slug } = useParams<{ slug: string }>();
+  const event = events.find(e => e.slug === slug);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  if (!event) {
+    return <Navigate to="/media" replace />;
+  }
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + event.images.length) % event.images.length);
+  };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % event.images.length);
+  };
+
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative min-h-[320px] md:min-h-[400px] overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={HERO_IMAGES.media} alt={event.title} className="w-full h-full object-cover object-center" loading="eager" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0e2a]/90 via-[#0a0e2a]/75 to-[#0a0e2a]/50" />
+        </div>
+        <div className="relative z-10 min-h-[320px] md:min-h-[400px] max-w-7xl mx-auto px-6 flex flex-col justify-end pb-10">
+          <nav className="flex items-center gap-2 text-sm text-white/50 mb-4 flex-wrap">
+            <Link to="/" className="hover:text-[#fd6909] transition-colors">Home</Link>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <Link to="/media" className="hover:text-[#fd6909] transition-colors">Media</Link>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <span className="text-white/80">{event.title}</span>
+          </nav>
+          <h1 className="text-3xl lg:text-4xl font-black text-white">{event.title}</h1>
+          <p className="text-white/60 mt-2 max-w-2xl text-lg">{event.subtitle}</p>
+          <div className="mt-4 flex flex-wrap gap-4 text-white/80 text-sm">
+            <span className="flex items-center gap-2">
+              <Calendar className="w-4 h-4 text-[#fd6909]" />
+              {event.date}
+            </span>
+            <span className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-[#fd6909]" />
+              {event.location}
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Left Column - Main Content */}
+            <div className="lg:col-span-2">
+              {/* Image Gallery */}
+              {event.images.length > 0 && (
+                <div className="mb-8 bg-gray-100 rounded-2xl overflow-hidden h-[400px] md:h-[500px] relative group">
+                  <img 
+                    src={event.images[currentImageIndex]} 
+                    alt={`Event gallery ${currentImageIndex + 1}`}
+                    className="w-full h-full object-cover transition-opacity duration-300"
+                  />
+                  {event.images.length > 1 && (
+                    <>
+                      <button
+                        onClick={handlePrevImage}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 bg-[#1E2455]/80 hover:bg-[#1E2455] text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10"
+                        aria-label="Previous image"
+                      >
+                        <ChevronLeft className="w-6 h-6" />
+                      </button>
+                      <button
+                        onClick={handleNextImage}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 bg-[#1E2455]/80 hover:bg-[#1E2455] text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10"
+                        aria-label="Next image"
+                      >
+                        <ChevronRight className="w-6 h-6" />
+                      </button>
+                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                        {event.images.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => setCurrentImageIndex(index)}
+                            className={`w-2 h-2 rounded-full transition-all ${
+                              index === currentImageIndex ? 'bg-white w-6' : 'bg-white/50'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
+
+              {/* Event Description */}
+              <div className="prose prose-sm max-w-none mb-8">
+                <p className="text-gray-700 leading-relaxed text-lg font-semibold mb-6">
+                  {event.description}
+                </p>
+                <div 
+                  className="text-gray-600 space-y-4"
+                  dangerouslySetInnerHTML={{ __html: event.fullContent }}
+                />
+              </div>
+
+              {/* Hashtags */}
+              {event.hashtags.length > 0 && (
+                <div className="mb-8">
+                  <h3 className="text-lg font-bold text-[#1E2455] mb-4">Event Hashtags</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {event.hashtags.map((tag) => (
+                      <span key={tag} className="inline-block px-4 py-2 bg-[#fd6909]/10 text-[#fd6909] font-semibold text-sm rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Speakers */}
+              {event.speakers.length > 0 && (
+                <div className="mb-8">
+                  <h3 className="text-lg font-bold text-[#1E2455] mb-4">Featured Speakers</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {event.speakers.map((speaker, idx) => (
+                      <div key={idx} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
+                        <h4 className="font-bold text-[#1E2455]">{speaker.name}</h4>
+                        <p className="text-sm text-gray-600">{speaker.title}</p>
+                        <p className="text-xs text-[#fd6909] font-semibold">{speaker.company}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Schedule */}
+              {event.schedule.length > 0 && (
+                <div>
+                  <h3 className="text-lg font-bold text-[#1E2455] mb-4">Event Schedule</h3>
+                  <div className="space-y-3">
+                    {event.schedule.map((item, idx) => (
+                      <div key={idx} className="flex gap-4 p-4 border border-gray-100 rounded-xl hover:bg-gray-50 transition">
+                        <div className="text-[#fd6909] font-bold text-sm min-w-[90px]">{item.time}</div>
+                        <div>
+                          <p className="font-semibold text-[#1E2455]">{item.event}</p>
+                          <p className="text-xs text-gray-500">{item.day}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Right Column - Sidebar */}
+            <div className="lg:col-span-1">
+              {/* Event Info Card */}
+              <div className="bg-gradient-to-br from-[#1E2455] to-[#0a0e2a] rounded-2xl p-6 text-white sticky top-6">
+                <h3 className="text-lg font-bold mb-4">Event Information</h3>
+                
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-white/60 text-xs uppercase tracking-wider mb-1">Category</p>
+                    <p className="font-semibold text-[#fd6909]">{event.category}</p>
+                  </div>
+                  
+                  <div className="pt-4 border-t border-white/10">
+                    <p className="text-white/60 text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+                      <Calendar className="w-4 h-4" /> Date
+                    </p>
+                    <p className="font-semibold">{event.date}</p>
+                  </div>
+                  
+                  <div className="pt-4 border-t border-white/10">
+                    <p className="text-white/60 text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+                      <MapPin className="w-4 h-4" /> Location
+                    </p>
+                    <p className="font-semibold">{event.location}</p>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/10">
+                    <p className="text-white/60 text-xs uppercase tracking-wider mb-3">Share Event</p>
+                    <div className="flex gap-2">
+                      <button className="flex-1 bg-white/10 hover:bg-white/20 p-2 rounded-lg transition text-sm flex items-center justify-center gap-1">
+                        <Share2 className="w-4 h-4" /> Share
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <Link 
+                  to="/contact"
+                  className="mt-6 block w-full bg-[#fd6909] hover:bg-[#fd6909]/90 text-white font-semibold py-3 rounded-lg text-center transition-all duration-200"
+                >
+                  Get More Information
+                </Link>
+              </div>
+
+              {/* Back to Media */}
+              <Link
+                to="/media"
+                className="mt-4 flex items-center justify-center gap-2 w-full py-3 border-2 border-gray-200 hover:border-[#fd6909] text-gray-600 hover:text-[#fd6909] font-semibold rounded-lg transition-all"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                Back to Media
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Events */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-black text-[#1E2455] mb-10">Other Events</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {events.filter(e => e.slug !== slug).map((e) => (
+              <Link key={e.slug} to={`/media/${e.slug}`}
+                className="group bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-lg hover:border-[#fd6909]/20 transition-all">
+                <span className="text-xs bg-[#fd6909]/10 text-[#fd6909] px-3 py-1 rounded-full font-medium">{e.category}</span>
+                <h3 className="text-lg font-bold text-[#1E2455] mt-3 group-hover:text-[#fd6909] transition-colors">{e.title}</h3>
+                <p className="text-gray-500 text-sm mt-2">{e.subtitle}</p>
+                <div className="mt-4 flex items-center gap-2 text-gray-400 text-xs">
+                  <Calendar className="w-3.5 h-3.5" /> {e.date}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
+
 /* ===== PROJECTS ===== */
 export function ProjectsPage() {
   const [filter, setFilter] = useState("All");
@@ -362,38 +598,39 @@ export function ProjectDetail() {
   ] : [];
 
   const [playingVideo, setPlayingVideo] = useState<{ id: string; label: string; url: string } | null>(null);
-const isVideoUrl = (url: string) => {
-  return /\.(mp4|webm|ogg)(\?.*)?$/i.test(url);
-};
+  
+  const isVideoUrl = (url: string) => {
+    return /\.(mp4|webm|ogg)(\?.*)?$/i.test(url);
+  };
 
-const renderGalleryItem = (
-  url: string,
-  index: number,
-  isMain = false
-) => {
-  const title = `${project?.title || "Project"} - ${index + 1}`;
+  const renderGalleryItem = (
+    url: string,
+    index: number,
+    isMain = false
+  ) => {
+    const title = `${project?.title || "Project"} - ${index + 1}`;
 
-  if (isVideoUrl(url)) {
+    if (isVideoUrl(url)) {
+      return (
+        <video
+          src={url}
+          controls
+          playsInline
+          preload="metadata"
+          className="w-full h-full object-cover"
+        />
+      );
+    }
+
     return (
-      <video
+      <img
         src={url}
-        controls
-        playsInline
-        preload="metadata"
-        className="w-full h-full object-cover"
+        alt={title}
+        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+        loading="lazy"
       />
     );
-  }
-
-  return (
-    <img
-      src={url}
-      alt={title}
-      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-      loading="lazy"
-    />
-  );
-};
+  };
   if (!project) return <Navigate to="/projects" replace />;
   const relatedSolutions = solutions.filter((s) => project.solutions.includes(s.slug));
 
@@ -926,8 +1163,63 @@ export function MediaPage() {
     <Layout>
       <PageHero title="Media Center" subtitle="Latest news, events, and press releases from Arab Security Gulf."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Media" }]} image={HERO_IMAGES.media} />
+      
+      {/* Events Section */}
+      {events.length > 0 && (
+        <section className="py-16 bg-gray-50 border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <span className="text-[#fd6909] text-sm font-bold uppercase tracking-widest">Featured</span>
+              <h2 className="text-3xl font-black text-[#1E2455] mt-3">Upcoming & Past Events</h2>
+              <p className="text-gray-500 mt-2 max-w-2xl mx-auto">Join us at industry events, exhibitions, and networking opportunities across the Gulf region.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {events.map((event) => (
+                <Link key={event.slug} to={`/media/${event.slug}`}
+                  className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#fd6909]/20 transition-all duration-300">
+                  {/* Event Image */}
+                  {event.images.length > 0 && (
+                    <div className="h-48 overflow-hidden bg-gray-200 relative">
+                      <img src={event.images[0]} alt={event.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                      <span className="absolute top-4 left-4 text-xs bg-[#fd6909] text-white px-3 py-1 rounded-full font-semibold">{event.category}</span>
+                    </div>
+                  )}
+                  
+                  {/* Event Details */}
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-[#1E2455] group-hover:text-[#fd6909] transition-colors">{event.title}</h3>
+                    <p className="text-[#fd6909] text-sm font-semibold mt-1">{event.subtitle}</p>
+                    <p className="text-gray-500 text-sm mt-3 line-clamp-2">{event.description}</p>
+                    
+                    {/* Event Meta */}
+                    <div className="mt-4 space-y-2">
+                      <div className="flex items-center gap-2 text-gray-400 text-xs">
+                        <Calendar className="w-3.5 h-3.5 text-[#fd6909]" /> {event.date}
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-400 text-xs">
+                        <MapPin className="w-3.5 h-3.5 text-[#fd6909]" /> {event.location}
+                      </div>
+                    </div>
+                    
+                    {/* CTA */}
+                    <div className="mt-4 flex items-center gap-2 text-[#fd6909] text-sm font-semibold group-hover:gap-3 transition-all">
+                      View Details <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* News Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-[#fd6909] text-sm font-bold uppercase tracking-widest">Updates</span>
+            <h2 className="text-3xl font-black text-[#1E2455] mt-3">Latest News & Updates</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {newsItems.map((n) => (
               <div key={n.id} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-lg transition-all">
