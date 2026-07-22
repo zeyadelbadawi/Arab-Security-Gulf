@@ -524,6 +524,89 @@ export const newsItems: NewsItem[] = [
   { id: "n6", title: "Smart Building Solutions for Kuwait Vision 2035", date: "November 18, 2025", excerpt: "ASG announces expanded smart building and IoT capabilities to support Kuwait's New Kuwait Vision 2035 development projects.", category: "Industry" },
 ];
 
+// Event Details Data
+export const events = [
+  {
+    id: "elgouna-2026",
+    slug: "elgouna-2026",
+    title: "Connect. Collaborate. Celebrate.",
+    subtitle: "El Gouna Partnership Event 2026",
+    date: "February 18-20, 2026",
+    location: "El Gouna, Egypt",
+    category: "Partnership Event",
+    description: "ASG Distribution and Dahua Technology brought together leading System Integrators and End-Users to celebrate strong partnerships and shared success in the security industry.",
+    fullContent: `
+      <h3>Event Highlights</h3>
+      <p>With the presence of both companies' leadership teams, the event highlighted El Gouna as a successful showcase of security solutions. Leading industry experts and thought leaders gathered to share insights on the latest trends in security technology, including AI-powered video analytics, cloud-based management systems, and IoT-integrated solutions.</p>
+      
+      <h3>Key Topics Covered</h3>
+      <ul>
+        <li>Next-Generation Video Surveillance Systems</li>
+        <li>AI and Machine Learning in Security</li>
+        <li>Cloud Integration and Remote Management</li>
+        <li>Cybersecurity in Physical Security</li>
+        <li>IoT Solutions for Smart Buildings</li>
+      </ul>
+      
+      <h3>Attendees</h3>
+      <p>The event attracted over 300 security professionals, system integrators, and industry partners from across the Middle East and North Africa region, fostering collaboration and knowledge exchange.</p>
+      
+      <h3>Partnerships Highlighted</h3>
+      <p>Together, we build a smarter, safer future. The event demonstrated how ASG Distribution and Dahua Technology are committed to delivering innovative security solutions that protect people, assets, and infrastructure across the region.</p>
+    `,
+    images: [
+      'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Connect.%20Collaborate.%20Celebrate.-Gxs2S5ljSk3lq802Mnls7qHFhAmQ2X.jpg',
+      '/assets/partners/12121212.jpg',
+      '/assets/partners/121.jpg',
+    ],
+    hashtags: ['#ASGDistribution', '#DahuaTechnology', '#ElGouna', '#SecurityInnovation', '#PartnershipEvent'],
+    speakers: [
+      { name: 'Ahmed Al-Rashid', title: 'CEO, Arab Security Gulf', company: 'ASG' },
+      { name: 'Dr. Sarah Johnson', title: 'Regional Director', company: 'Dahua Technology' },
+      { name: 'Mohammed Al-Sabah', title: 'Sales Director', company: 'ASG Distribution' },
+    ],
+    schedule: [
+      { time: '09:00 AM', event: 'Registration & Welcome Coffee', day: 'Day 1' },
+      { time: '10:00 AM', event: 'Opening Keynote: The Future of Security', day: 'Day 1' },
+      { time: '11:00 AM', event: 'Technology Showcase & Exhibition', day: 'Day 1' },
+      { time: '01:00 PM', event: 'Networking Lunch', day: 'Day 1' },
+      { time: '02:00 PM', event: 'Panel Discussion: Industry Challenges & Solutions', day: 'Day 1' },
+    ]
+  },
+  {
+    id: "kuwait-security-expo-2026",
+    slug: "kuwait-security-expo-2026",
+    title: "Kuwait Security Expo 2026",
+    subtitle: "Showcasing the Future of Security Technology",
+    date: "March 10-12, 2026",
+    location: "Kuwait City Convention Center, Kuwait",
+    category: "Industry Exhibition",
+    description: "ASG showcases its latest AI-powered security and smart building solutions at Kuwait Security Expo 2026, one of the region's premier security industry events.",
+    fullContent: `
+      <h3>Exhibition Overview</h3>
+      <p>Arab Security Gulf presented its comprehensive portfolio of security solutions, including integrated security systems, video surveillance, access control, fire safety, and smart building technologies.</p>
+      
+      <h3>Featured Products & Services</h3>
+      <ul>
+        <li>AI-Powered Video Analytics & Facial Recognition</li>
+        <li>Advanced Access Control Systems</li>
+        <li>Integrated Fire & Life Safety Solutions</li>
+        <li>Smart Building Management Platforms</li>
+        <li>Cybersecurity-Integrated Solutions</li>
+      </ul>
+      
+      <h3>Live Demonstrations</h3>
+      <p>Visitors experienced hands-on demonstrations of cutting-edge security technologies, with expert consultants available to discuss customized solutions for various industry sectors.</p>
+    `,
+    images: [
+      'https://mgx-backend-cdn.metadl.com/generate/images/967905/2026-05-13/ook7zryaagqa/hero-homepage-kuwait-skyline.png',
+    ],
+    hashtags: ['#KuwaitSecurityExpo', '#ASG', '#SecurityTechnology', '#Innovation'],
+    speakers: [],
+    schedule: []
+  },
+];
+
 export const companyInfo = {
   name: "Arab Security Gulf",
   shortName: "ASG",
