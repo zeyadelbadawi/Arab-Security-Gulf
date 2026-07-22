@@ -6,7 +6,7 @@ import ServicesPage from "@/pages/Services";
 import {
   AboutPage, IndustriesPage, IndustryDetail, ProjectsPage, ProjectDetail,
   PartnersPage, ClientsPage, MediaPage, FAQsPage, TrainingPage,
-  CareersPage, ContactPage, PartnerWithUsPage, RequestQuotePage
+  CareersPage, ContactPage, PartnerWithUsPage, RequestQuotePage, EventDetail
 } from "@/pages/About";
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
         <Route path="/partners" element={<PartnersPage />} />
         <Route path="/clients" element={<ClientsPage />} />
         <Route path="/media" element={<MediaPage />} />
+        <Route path="/media/:slug" element={<EventDetail />} />
         <Route path="/faqs" element={<FAQsPage />} />
         <Route path="/training" element={<TrainingPage />} />
         <Route path="/careers" element={<CareersPage />} />
