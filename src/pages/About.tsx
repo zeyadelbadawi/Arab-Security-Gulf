@@ -5,7 +5,7 @@ import {
   newsItems, solutions, services, stats, HERO_IMAGES, PROJECT_IMAGES, getIndustryHeroImage, events
 } from "@/data/siteData";
 import {
-  ChevronRight, ArrowRight, CheckCircle2, MapPin, Phone, Mail,
+  ChevronLeft, ChevronRight, ArrowRight, CheckCircle2, MapPin, Phone, Mail,
   Calendar, Clock, Users, Star, Briefcase, Send, ChevronDown,
   Building2, Award, Target, Heart, Shield, Globe, ExternalLink,
   Facebook, Instagram, Linkedin, Truck, MapPinIcon, Share2, Download
@@ -481,7 +481,7 @@ export function EventDetail() {
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-black text-[#1E2455] mb-10">Other Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {events.filter(e => e.slug !== slug).map((e) => (
+            {events.filter(e => e.slug !== event.slug).map((e) => (
               <Link key={e.slug} to={`/media/${e.slug}`}
                 className="group bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-lg hover:border-[#fd6909]/20 transition-all">
                 <span className="text-xs bg-[#fd6909]/10 text-[#fd6909] px-3 py-1 rounded-full font-medium">{e.category}</span>
