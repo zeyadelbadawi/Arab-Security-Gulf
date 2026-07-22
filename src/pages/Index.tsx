@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
+import { EventPopup } from "@/components/EventPopup";
 import {
   solutions, services, industries, projects, stats, whyChooseUs,
   companyInfo, partners, HERO_IMAGES, PROJECT_IMAGES
@@ -302,6 +303,7 @@ function PartnersCarousel() {
 export default function Index() {
   return (
     <Layout>
+      <EventPopup />
       <HeroSection />
 
       {/* Solutions Section */}
