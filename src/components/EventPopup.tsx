@@ -139,13 +139,13 @@ export function EventPopup({ eventSlug = 'elgouna-2026', autoClose = true }: Eve
                   An inspiring event that brought together industry professionals and experts to explore the latest Huawei eKit solutions and technologies.
                 </p>
                 <p className="md:block hidden">
-                  Discuss business growth opportunities and build valuable connections with industry leaders. 🤝📡
+                  Discuss business growth opportunities and build valuable connections with industry leaders.
                 </p>
                 <p className="block md:hidden">
                   Industry professionals exploring Huawei eKit solutions and business opportunities.
                 </p>
                 <p className="font-semibold text-[#1E2455] text-xs md:text-sm">
-                  Thank you to everyone who made this event a success! 🚀
+                  Thank you to everyone who made this event a success!
                 </p>
 
                 {/* Hashtags */}
