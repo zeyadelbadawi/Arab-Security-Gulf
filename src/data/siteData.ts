@@ -529,49 +529,47 @@ export const events = [
   {
     id: "elgouna-2026",
     slug: "elgouna-2026",
-    title: "Connect. Collaborate. Celebrate.",
-    subtitle: "El Gouna Partnership Event 2026",
-    date: "February 18-20, 2026",
-    location: "El Gouna, Egypt",
-    category: "Partnership Event",
-    description: "ASG Distribution and Dahua Technology brought together leading System Integrators and End-Users to celebrate strong partnerships and shared success in the security industry.",
+    title: "PUSHING BUSINESS BOUNDARIES",
+    subtitle: "Event presented by Huawei eKit",
+    date: "Recent Event",
+    location: "Kuwait",
+    category: "Networking Event",
+    description: "An inspiring event that brought together industry professionals and experts to explore the latest Huawei eKit solutions and technologies, discuss business growth opportunities, and build valuable connections.",
     fullContent: `
-      <h3>Event Highlights</h3>
-      <p>With the presence of both companies' leadership teams, the event highlighted El Gouna as a successful showcase of security solutions. Leading industry experts and thought leaders gathered to share insights on the latest trends in security technology, including AI-powered video analytics, cloud-based management systems, and IoT-integrated solutions.</p>
+      <h3>لقطات من حدث PUSHING BUSINESS BOUNDARIES</h3>
+      <p>أجواء مميزة جمعت نخبة من المتخصصين والخبراء لاستكشاف أحدث حلول وتقنيات Huawei eKit، ومناقشة فرص تطوير الأعمال وبناء شراكات جديدة 🤝📡</p>
       
-      <h3>Key Topics Covered</h3>
+      <h3>Event Highlights</h3>
+      <p>An inspiring event that brought together industry professionals and experts to explore the latest Huawei eKit solutions and technologies, discuss business growth opportunities, and build valuable connections.</p>
+      
+      <h3>Key Focus Areas</h3>
       <ul>
-        <li>Next-Generation Video Surveillance Systems</li>
-        <li>AI and Machine Learning in Security</li>
-        <li>Cloud Integration and Remote Management</li>
-        <li>Cybersecurity in Physical Security</li>
-        <li>IoT Solutions for Smart Buildings</li>
+        <li>Huawei eKit Latest Solutions & Technologies</li>
+        <li>Business Development Opportunities</li>
+        <li>Strategic Partnerships & Collaborations</li>
+        <li>Industry Networking & Knowledge Exchange</li>
+        <li>Future Growth Strategies</li>
       </ul>
       
-      <h3>Attendees</h3>
-      <p>The event attracted over 300 security professionals, system integrators, and industry partners from across the Middle East and North Africa region, fostering collaboration and knowledge exchange.</p>
-      
-      <h3>Partnerships Highlighted</h3>
-      <p>Together, we build a smarter, safer future. The event demonstrated how ASG Distribution and Dahua Technology are committed to delivering innovative security solutions that protect people, assets, and infrastructure across the region.</p>
+      <h3>Thank You</h3>
+      <p>شكراً لكل من كان جزءًا من هذا الحدث المميز، ونتطلع للمزيد من النجاحات والفعاليات القادمة 🚀</p>
+      <p>Thank you to everyone who joined us and contributed to making this event a great success. Looking forward to more successful events ahead 🚀</p>
     `,
     images: [
-      'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Connect.%20Collaborate.%20Celebrate.-Gxs2S5ljSk3lq802Mnls7qHFhAmQ2X.jpg',
-      '/assets/partners/12121212.jpg',
-      '/assets/partners/121.jpg',
+      'https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/700316989_960530016971288_8716469440493860672_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zjDhxfrrqA8Q7kNvwGMUGFJ&_nc_oc=AdpSIx4vo5K2RgIxkX4XgwjusEadQxxY3qGgOhXIUFbng59RLtINtdai0ZW8KDtqgfU&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=u_tO9I1Wesg2D8GoiyIqcw&_nc_ss=7b2a8&oh=00_AQD3XIeSFU17nvUvss2P4IYFKMxRipmD8apjjLlrmGxoHQ&oe=6A666546',
+      'https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/701665507_960530096971280_5981589045716331116_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IzrwIFhSDfEQ7kNvwE2UNWm&_nc_oc=AdoJ5p9IBuiCfYTax20wSsT_G242pL16MTfhxk0cDIcjJP8so3Rs2ESGBB8zRR0hG_8&_nc_zt=23&_nc_ht=scontent.fcai20-1.fna&_nc_gid=umYr-cv9pMcX6_-UfEP8XA&_nc_ss=7b2a8&oh=00_AQDY2QaU83qblxRX26YUt5FDhPRcnIQghL5qbZiVxBjbnw&oe=6A666F10',
+      'https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/701785886_960530146971275_773392036823866952_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HXl3nFWG0WAQ7kNvwEvcJJn&_nc_oc=AdqO3FPGsuxADG1wN97MYxZXOKfdQ6D-NeyVJ8u_B8hdpShEyc4FVr2p1k9XZSPTQ3s&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&_nc_gid=Mu9u9X3R-X_YYGJo3PtQjQ&_nc_ss=7b2a8&oh=00_AQDWFMHUycsNlZGoXFW-kj2QwjXoyh5tL8_BcioqmVrt7g&oe=6A6656A6',
+      'https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/701651635_960530600304563_8736194490313966316_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=AGhhcb2jLVwQ7kNvwEv8axx&_nc_oc=AdpHWw36IPlyi4FrjFM11BMEd6MV478douuPfRv3U2sLCwZ1glegTATI2kZS3AOs2kk&_nc_zt=23&_nc_ht=scontent.fcai20-5.fna&_nc_gid=GsCxVbiq172-bwC3sHG2Tg&_nc_ss=7b2a8&oh=00_AQDMC_aK2tVYPAxV21rZB7T44-mhcmfCOIjruyo9tP101Q&oe=6A667BAC',
+      'https://scontent.fcai20-2.fna.fbcdn.net/v/t39.30808-6/699572960_960530830304540_1034421045545861301_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iLji7r9Ns8gQ7kNvwHBjg08&_nc_oc=AdopqvYZHN6K-oS5E9FFV30bVw-pRy6OSSBCLiBLPaA2XPAzHGEpyiAdjyoC3s3aK8Q&_nc_zt=23&_nc_ht=scontent.fcai20-2.fna&_nc_gid=CnBufubjhm6ag4Elcu0hlw&_nc_ss=7b2a8&oh=00_AQDax91hbm_leWrp0pvFWO1W0lJZws3H2g93KUgie12Kkg&oe=6A666F06',
+      'https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/701600503_960532050304418_1990906862941951962_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=icYRcRRaglkQ7kNvwF9IW42&_nc_oc=AdrQ0HuOzEvqeNpZdhFr3_XwCY2Hk7rCvTovCrxuOEgIiAd3GTgrF-26ta5puFe5flI&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&_nc_gid=PXZrPekOKkKTc_vrQrSCxA&_nc_ss=7b2a8&oh=00_AQD5HJpKxCcb6dHu8IeWEZFPA7OJUC-NGj9yPKsOUcLcOw&oe=6A6671A4',
+      'https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/701696865_960531493637807_1145905682485408223_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GZIkIJDhTjQQ7kNvwEuJ-CQ&_nc_oc=AdqbttKM_R6IC_RoQnw77XRu5LnoYHs0rK3t7hziSt9vkAKk-nXqO06K8Fm05CLR5WE&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&_nc_gid=_EPdLGkxNV7Tj8y50PXL-Q&_nc_ss=7b2a8&oh=00_AQCWyd1h8Fx_M1vSeE3vsvA8k3xDjgrWFUaFQGoAjabZA&oe=6A66740B',
+      'https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/701582188_960531550304468_6816599792501150651_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JbE_mVw6gf8Q7kNvwEyD4QY&_nc_oc=AdrmrIdUVd371ia3k6Yfq_4oMzdz1mY3NefZgO0rDV6wWa1Gk0vFCh9PXaEfSLXeNBw&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=wpb-vfGe82NZYQUsB3saag&_nc_ss=7b2a8&oh=00_AQDmetIs9QsaLJZtN2qWSwc91XGQJTM0RzXp01SB16UcUg&oe=6A66760C',
+      'https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/698536651_960531646971125_8209466658134383774_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KyPkvsINnuYQ7kNvwGax6l3&_nc_oc=AdrpsbOZHnj-KaELEMsuI25NZJ0f4Ynwv7HBIZA4XRdBKYZP4TiXe0nYotjYAsuSaXo&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=UXsdsEvpilcVG3SImycw4A&_nc_ss=7b2a8&oh=00_AQAoMfgkDyisbcBzQI3Lbyuxu_iagvoSnzuoLFBewvScqg&oe=6A668D7C',
+      'https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/701612470_960531736971116_3012850009792121523_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Kl0ORed0Yk0Q7kNvwHahZZo&_nc_oc=AdoSMvPM3E-VeFChjxrLUbafTTlk2_OwN7qWeAboopKSUEq2CqgnPLQQs6EMeDfwVR8&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&_nc_gid=ZiROL5QdbfeGSHJERXPZ1g&_nc_ss=7b2a8&oh=00_AQDxscm06Q64q-VgsgQbXZc0s8J22ZLptJX_vkNgxLjdkw&oe=6A66733D'
     ],
-    hashtags: ['#ASGDistribution', '#DahuaTechnology', '#ElGouna', '#SecurityInnovation', '#PartnershipEvent'],
-    speakers: [
-      { name: 'Ahmed Al-Rashid', title: 'CEO, Arab Security Gulf', company: 'ASG' },
-      { name: 'Dr. Sarah Johnson', title: 'Regional Director', company: 'Dahua Technology' },
-      { name: 'Mohammed Al-Sabah', title: 'Sales Director', company: 'ASG Distribution' },
-    ],
-    schedule: [
-      { time: '09:00 AM', event: 'Registration & Welcome Coffee', day: 'Day 1' },
-      { time: '10:00 AM', event: 'Opening Keynote: The Future of Security', day: 'Day 1' },
-      { time: '11:00 AM', event: 'Technology Showcase & Exhibition', day: 'Day 1' },
-      { time: '01:00 PM', event: 'Networking Lunch', day: 'Day 1' },
-      { time: '02:00 PM', event: 'Panel Discussion: Industry Challenges & Solutions', day: 'Day 1' },
-    ]
+    hashtags: ['#ArabSecurityGulf', '#ASG', '#More_Secure_Than_Ever', '#Kuwait', '#Event', '#Huawei_eKit', '#BusinessBoundaries', '#Networking', '#Technology', '#Innovation'],
+    speakers: [],
+    schedule: []
   },
   {
     id: "kuwait-security-expo-2026",
