@@ -536,8 +536,7 @@ export const events = [
     category: "Networking Event",
     description: "An inspiring event that brought together industry professionals and experts to explore the latest Huawei eKit solutions and technologies, discuss business growth opportunities, and build valuable connections.",
     fullContent: `
-      <h3>لقطات من حدث PUSHING BUSINESS BOUNDARIES</h3>
-      <p>أجواء مميزة جمعت نخبة من المتخصصين والخبراء لاستكشاف أحدث حلول وتقنيات Huawei eKit، ومناقشة فرص تطوير الأعمال وبناء شراكات جديدة 🤝📡</p>
+      <h3>PUSHING BUSINESS BOUNDARIES</h3>
       
       <h3>Event Highlights</h3>
       <p>An inspiring event that brought together industry professionals and experts to explore the latest Huawei eKit solutions and technologies, discuss business growth opportunities, and build valuable connections.</p>
@@ -552,8 +551,7 @@ export const events = [
       </ul>
       
       <h3>Thank You</h3>
-      <p>شكراً لكل من كان جزءًا من هذا الحدث المميز، ونتطلع للمزيد من النجاحات والفعاليات القادمة 🚀</p>
-      <p>Thank you to everyone who joined us and contributed to making this event a great success. Looking forward to more successful events ahead 🚀</p>
+      <p>Thank you to everyone who joined us and contributed to making this event a great success. Looking forward to more successful events ahead</p>
     `,
     images: [
       'https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/700316989_960530016971288_8716469440493860672_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zjDhxfrrqA8Q7kNvwGMUGFJ&_nc_oc=AdpSIx4vo5K2RgIxkX4XgwjusEadQxxY3qGgOhXIUFbng59RLtINtdai0ZW8KDtqgfU&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=u_tO9I1Wesg2D8GoiyIqcw&_nc_ss=7b2a8&oh=00_AQD3XIeSFU17nvUvss2P4IYFKMxRipmD8apjjLlrmGxoHQ&oe=6A666546',
