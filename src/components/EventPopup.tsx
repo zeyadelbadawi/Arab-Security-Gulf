@@ -8,9 +8,9 @@ interface EventPopupProps {
 }
 
 const CAROUSEL_IMAGES = [
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Connect.%20Collaborate.%20Celebrate.-Gxs2S5ljSk3lq802Mnls7qHFhAmQ2X.jpg',
-  '/assets/partners/12121212.jpg',
-  '/assets/partners/121.jpg',
+  'https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/700316989_960530016971288_8716469440493860672_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zjDhxfrrqA8Q7kNvwGMUGFJ&_nc_oc=AdpSIx4vo5K2RgIxkX4XgwjusEadQxxY3qGgOhXIUFbng59RLtINtdai0ZW8KDtqgfU&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=u_tO9I1Wesg2D8GoiyIqcw&_nc_ss=7b2a8&oh=00_AQD3XIeSFU17nvUvss2P4IYFKMxRipmD8apjjLlrmGxoHQ&oe=6A666546',
+  'https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/701665507_960530096971280_5981589045716331116_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IzrwIFhSDfEQ7kNvwE2UNWm&_nc_oc=AdoJ5p9IBuiCfYTax20wSsT_G242pL16MTfhxk0cDIcjJP8so3Rs2ESGBB8zRR0hG_8&_nc_zt=23&_nc_ht=scontent.fcai20-1.fna&_nc_gid=umYr-cv9pMcX6_-UfEP8XA&_nc_ss=7b2a8&oh=00_AQDY2QaU83qblxRX26YUt5FDhPRcnIQghL5qbZiVxBjbnw&oe=6A666F10',
+  'https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/701785886_960530146971275_773392036823866952_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HXl3nFWG0WAQ7kNvwEvcJJn&_nc_oc=AdqO3FPGsuxADG1wN97MYxZXOKfdQ6D-NeyVJ8u_B8hdpShEyc4FVr2p1k9XZSPTQ3s&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&_nc_gid=Mu9u9X3R-X_YYGJo3PtQjQ&_nc_ss=7b2a8&oh=00_AQDWFMHUycsNlZGoXFW-kj2QwjXoyh5tL8_BcioqmVrt7g&oe=6A6656A6',
 ];
 
 export function EventPopup({ eventSlug = 'elgouna-2026', autoClose = true }: EventPopupProps) {
@@ -81,7 +81,7 @@ export function EventPopup({ eventSlug = 'elgouna-2026', autoClose = true }: Eve
             {/* Carousel Image */}
             <img
               src={CAROUSEL_IMAGES[currentImageIndex]}
-              alt="El Gouna Partnership Event"
+              alt="PUSHING BUSINESS BOUNDARIES Event"
               className="w-full h-full object-contain transition-opacity duration-300"
             />
 
@@ -129,28 +129,28 @@ export function EventPopup({ eventSlug = 'elgouna-2026', autoClose = true }: Eve
 
               {/* Title */}
               <h2 className="font-display text-lg md:text-3xl font-bold text-[#1E2455] mb-1 leading-tight">
-                Connect. Collaborate. Celebrate.
+                PUSHING BUSINESS BOUNDARIES
               </h2>
-              <p className="text-[#fd6909] font-semibold text-xs md:text-sm mb-3 md:mb-5">El Gouna, Egypt 2026</p>
+              <p className="text-[#fd6909] font-semibold text-xs md:text-sm mb-3 md:mb-5">Presented by Huawei eKit</p>
 
               {/* Description - Show full on desktop, compact on mobile */}
               <div className="space-y-2 md:space-y-3 text-gray-700 text-xs md:text-sm leading-relaxed">
                 <p className="md:block hidden">
-                  ASG Distribution and Dahua Technology brought together leading System Integrators and End-Users to celebrate strong partnerships and shared success.
+                  An inspiring event that brought together industry professionals and experts to explore the latest Huawei eKit solutions and technologies.
                 </p>
                 <p className="md:block hidden">
-                  With the presence of both companies&apos; leadership teams, the event highlighted El Gouna as a successful showcase of security solutions.
+                  Discuss business growth opportunities and build valuable connections with industry leaders. 🤝📡
                 </p>
                 <p className="block md:hidden">
-                  ASG Distribution and Dahua Technology brought together partners to celebrate success.
+                  Industry professionals exploring Huawei eKit solutions and business opportunities.
                 </p>
                 <p className="font-semibold text-[#1E2455] text-xs md:text-sm">
-                  Together, we build a smarter, safer future.
+                  Thank you to everyone who made this event a success! 🚀
                 </p>
 
                 {/* Hashtags */}
                 <div className="flex flex-wrap gap-2 pt-2">
-                  {['#ASGDistribution', '#DahuaTechnology', '#ElGouna'].map((tag) => (
+                  {['#HuawaiEKit', '#BusinessBoundaries', '#Innovation'].map((tag) => (
                     <span key={tag} className="text-xs text-[#fd6909] font-medium">
                       {tag}
                     </span>
