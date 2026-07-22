@@ -5,7 +5,7 @@ import {
   newsItems, solutions, services, stats, HERO_IMAGES, PROJECT_IMAGES, getIndustryHeroImage, events
 } from "@/data/siteData";
 import {
-  ChevronRight, ArrowRight, CheckCircle2, MapPin, Phone, Mail,
+  ChevronRight, ArrowRight, ChevronLeft, CheckCircle2, MapPin, Phone, Mail,
   Calendar, Clock, Users, Star, Briefcase, Send, ChevronDown,
   Building2, Award, Target, Heart, Shield, Globe, ExternalLink,
   Facebook, Instagram, Linkedin, Truck, MapPinIcon, Share2, Download
