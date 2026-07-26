@@ -802,33 +802,76 @@ images: [
 
   schedule: []
 },
-  {
+ {
+  id: "huawei-connect-china-visit-2025",
   slug: "huawei-connect-china-visit-2025",
-  title: "Arab Security Gulf Team Visits China for Huawei Connect 2025",
-  subtitle: "Strengthening Global Partnerships & Driving Digital Transformation",
+
+  title:
+    "Arab Security Gulf Team Visits China for Huawei Connect 2025",
+
+  subtitle:
+    "Strengthening Global Partnerships & Driving Digital Transformation",
+
+  date: "October 2025",
+
+  location: "Shanghai, China",
+
+  category: "Technology Conference",
+
   description:
     "Arab Security Gulf participated in an exclusive visit to China alongside Huawei's Top Resellers, attending Huawei Connect 2025 and exploring the latest innovations in networking, communications, and digital transformation.",
 
-  fullDescription: `
-Arab Security Gulf proudly participated in an exclusive business visit to China in collaboration with Huawei, joining the region's Top Huawei Resellers to attend Huawei Connect 2025.
+  fullContent: `
+    <h3>Event Overview</h3>
 
-During the visit, the ASG team explored Huawei's latest innovations in networking, communications, cloud technologies, artificial intelligence, and digital transformation solutions. The event provided valuable opportunities to exchange expertise, discover emerging technologies, and strengthen strategic partnerships with Huawei and industry leaders from around the world.
+    <p>
+      Arab Security Gulf proudly participated in an exclusive business visit to China in collaboration with Huawei, joining the region's Top Huawei Resellers to attend Huawei Connect 2025.
+    </p>
 
-This participation reflects Arab Security Gulf's ongoing commitment to bringing world-class technologies and innovative solutions to the Gulf region while supporting customers on their digital transformation journey.
+    <p>
+      During the visit, the ASG team explored Huawei's latest innovations in networking, communications, cloud technologies, artificial intelligence, and digital transformation solutions while strengthening strategic partnerships with industry leaders.
+    </p>
 
-By strengthening its collaboration with Huawei, Arab Security Gulf continues to deliver cutting-edge ICT and smart infrastructure solutions that help organizations embrace the future with confidence.
+    <h3>Highlights</h3>
+
+    <ul>
+      <li>Attended Huawei Connect 2025 in Shanghai.</li>
+      <li>Explored networking, cloud, AI, and ICT innovations.</li>
+      <li>Met with Huawei experts and global technology leaders.</li>
+      <li>Strengthened strategic partnerships with Huawei.</li>
+      <li>Discovered the latest digital transformation solutions.</li>
+    </ul>
+
+    <h3>Our Commitment</h3>
+
+    <p>
+      By strengthening its collaboration with Huawei, Arab Security Gulf continues to deliver cutting-edge ICT and smart infrastructure solutions that help organizations embrace the future with confidence.
+    </p>
   `,
-
-  date: "October 2025",
-  location: "Shanghai, China",
-  category: "Technology Conference",
 
   images: [
     "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/559368958_772856569071968_2999679046450053127_n.jpg",
     "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/559365907_772856625738629_4842011578074073290_n.jpg",
     "https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/558868001_772857699071855_3939824441643591212_n.jpg",
     "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/558562595_772857889071836_415923734395859454_n.jpg"
-  ]
+  ],
+
+  hashtags: [
+    "#ArabSecurityGulf",
+    "#ASG",
+    "#Huawei",
+    "#HuaweiConnect2025",
+    "#China",
+    "#DigitalTransformation",
+    "#Cloud",
+    "#AI",
+    "#Networking",
+    "#Innovation"
+  ],
+
+  speakers: [],
+
+  schedule: []
 },
   {
   slug: "huawei-ekit-distributor-training-kuwait-2025",
