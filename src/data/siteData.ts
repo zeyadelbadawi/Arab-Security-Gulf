@@ -568,29 +568,7 @@ export const events = [
     speakers: [],
     schedule: []
   },
-{
-  id: "gulf-forum-development-sustainable-projects-management",
-  title: "Arab Security Gulf Participates in the Gulf Forum for Development & Sustainable Projects Management",
-  slug: "gulf-forum-development-sustainable-projects-management",
-  category: "Events",
-  date: "July 2026",
-
-  excerpt:
-    "Arab Security Gulf proudly participated in the Gulf Forum for Development & Sustainable Projects Management, connecting with industry leaders and showcasing innovative solutions for sustainable development across the region.",
-
-  content:
-    "Arab Security Gulf was proud to participate in the Gulf Forum for Development & Sustainable Projects Management, one of the region's leading events focused on sustainable growth and project excellence.\n\nThroughout the forum, our team connected with industry leaders, exchanged valuable insights, and explored the latest innovations shaping the future of sustainable projects. The event provided an excellent opportunity to strengthen relationships, discuss emerging technologies, and demonstrate how intelligent security solutions support safer, smarter, and more sustainable environments.\n\nOur participation reflects Arab Security Gulf's ongoing commitment to delivering smart, secure, and efficient solutions that empower businesses, organizations, and communities throughout the Gulf region.",
-
-  coverImage:
-    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/599491002_836499262707698_4775359694055293308_n.jpg",
-
-  images: [
-    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/599491002_836499262707698_4775359694055293308_n.jpg",
-    "https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/602292322_836499256041032_3224809738455810405_n.jpg",
-    "https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/600884710_836499236041034_4257460561312344202_n.jpg",
-    "https://scontent.fcai20-3.fna.fbcdn.net/v/t39.30808-6/605142457_836499259374365_7120906090925545578_n.jpg"
-  ]
-},  
+ 
 {
   id: "gulf-forum-development-sustainable-projects-management",
   slug: "gulf-forum-development-sustainable-projects-management",
@@ -656,7 +634,7 @@ export const events = [
   speakers: [],
 
   schedule: []
-}
+},
 ];
 
 export const companyInfo = {
