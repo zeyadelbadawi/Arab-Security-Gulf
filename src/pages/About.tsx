@@ -320,12 +320,12 @@ export function EventDetail() {
             <div className="lg:col-span-2">
               {/* Image Gallery */}
               {event.images.length > 0 && (
-                <div className="mb-8 bg-gray-100 rounded-2xl overflow-hidden h-[400px] md:h-[500px] relative group">
-                  <img 
-                    src={event.images[currentImageIndex]} 
-                    alt={`Event gallery ${currentImageIndex + 1}`}
-                    className="w-full h-full object-cover transition-opacity duration-300"
-                  />
+                <div className="mb-8 bg-gray-100 rounded-2xl relative group flex items-center justify-center p-2">
+  <img
+    src={event.images[currentImageIndex]}
+    alt={`Event gallery ${currentImageIndex + 1}`}
+    className="w-full h-auto max-h-[700px] object-contain transition-opacity duration-300"
+  />
                   {event.images.length > 1 && (
                     <>
                       <button
