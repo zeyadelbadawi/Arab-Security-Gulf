@@ -638,6 +638,99 @@ images: [
 
   schedule: []
 },
+
+  {
+  id: "gulf-iot-ai-technology-conference-2025",
+  slug: "gulf-iot-ai-technology-conference-2025",
+
+  title: "Arab Security Gulf Showcases Smart Security Solutions at the Gulf IoT & AI Technology Conference & Exhibition",
+
+  subtitle: "Driving Innovation Through IoT, Artificial Intelligence & Integrated Security",
+
+  date: "December 4, 2025",
+
+  location: "Kuwait",
+
+  category: "Technology Conference",
+
+  description:
+    "Arab Security Gulf proudly participated in the Gulf IoT & AI Technology Conference & Exhibition, presenting its latest smart security solutions and advanced technologies while connecting with industry leaders and technology innovators.",
+
+  fullContent: `
+    <h3>Event Overview</h3>
+
+    <p>
+      Arab Security Gulf proudly participated in the Gulf IoT & AI Technology
+      Conference & Exhibition, one of the region's premier events dedicated to
+      innovation in the Internet of Things (IoT), Artificial Intelligence (AI),
+      and emerging technologies.
+    </p>
+
+    <p>
+      During the exhibition, our team showcased the latest intelligent security
+      solutions, smart surveillance technologies, integrated security systems,
+      and AI-powered innovations designed to help organizations build safer,
+      smarter, and more efficient environments.
+    </p>
+
+    <h3>Highlights</h3>
+
+    <ul>
+      <li>Showcased advanced smart security and surveillance solutions.</li>
+      <li>Presented innovative technologies powered by Artificial Intelligence and IoT.</li>
+      <li>Connected with technology leaders, partners, and industry professionals.</li>
+      <li>Explored future trends in digital transformation and integrated security systems.</li>
+      <li>Strengthened relationships with businesses and organizations across the Gulf region.</li>
+    </ul>
+
+    <h3>Our Commitment</h3>
+
+    <p>
+      Our participation reflects Arab Security Gulf's commitment to driving
+      innovation in IoT, Artificial Intelligence, and integrated security
+      technologies. We remain dedicated to delivering intelligent, secure, and
+      future-ready solutions that empower businesses and communities throughout
+      the region.
+    </p>
+
+    <p>
+      We sincerely thank everyone who visited our booth and engaged with our
+      team. Together, we continue shaping a smarter, safer, and more connected
+      future.
+    </p>
+  `,
+
+  hashtags: [
+    "#ArabSecurityGulf",
+    "#ASG",
+    "#MoreSecureThanEver",
+    "#IoT",
+    "#ArtificialIntelligence",
+    "#SmartSecurity",
+    "#IntegratedSecurity",
+    "#Innovation",
+    "#Kuwait",
+    "#Technology",
+    "#Conference",
+    "#Exhibition"
+  ],
+
+  speakers: [],
+
+  schedule: [],
+
+  images: [
+    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/594959181_823834957307462_8508854969315454680_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=x6l8YQgvEc0Q7kNvwHnnmQR&_nc_oc=Adr0paIyVovNbo7NsyICs1SsUeLlJcS2wlGcCCLzirBcDP_qKm4wXQ9AfTLPLSjFG_Y&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQBQID-tjL4UtHhYlfgXGHinAxI6ECr_YNuJLhYDNrrlVw&oe=6A6BA6A6",
+
+    "https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/593782140_823834903974134_6897880879457201860_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iSlSwJ_796AQ7kNvwG2h5Jm&_nc_oc=Adpb6vOZSfqKaq8eKEgikabEjFb4zE_mcON3A3N6w3rIyN1p0_zHQJtqREbn7rgsX5Y&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQBl97cenG1rtTIvSg5bJ3-LBO8bVRAt0-Wrj0eKn6h-MA&oe=6A6B8D74",
+
+    "https://scontent.fcai20-3.fna.fbcdn.net/v/t39.30808-6/593946242_823834890640802_6434931984325120602_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=usAAs1fEZLQQ7kNvwFxXMac&_nc_oc=AdofZcuoOUc4ylg0UpclFUq8q-breMOLsPTzPOvf2WvmHBiFjbzTnMWmNTicohEfdzU&_nc_zt=23&_nc_ht=scontent.fcai20-3.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQCltB5P8Hk-ikuC16wtH1lJFMidgO0k3UlnV7WROjbkOQ&oe=6A6BB5BB",
+
+    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/594699652_823834950640796_5870196529908804280_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=uNjTNOYhTNUQ7kNvwHX7N3u&_nc_oc=AdoGY55ZrRsGOy-Z0sLZXTt0UGQfWTRhqnp1tmIw9yC_XaQpPXfmefqcDWxfqQHTvqM&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQCxv48L6-gH-M0A2ZwIkNAIhQ1wVWyB8VH_GC0OKqOHFA&oe=6A6BB585",
+
+    "https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/592482659_823834943974130_5025675012969764396_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xvU0coTLBCMQ7kNvwEJKIzP&_nc_oc=Adp9zdYmBh_n2WnWA-maKjzQ-Yx17byzhVeXxtJvQyw9EVZSMmXO3zJsX26842mcEnE&_nc_zt=23&_nc_ht=scontent.fcai20-5.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQA28P5WRuPWeLq-BzUenA8jsNiFv8uC683D94g9xOav5Q&oe=6A6B94E3"
+  ]
+},
 ];
 
 export const companyInfo = {
