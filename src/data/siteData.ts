@@ -731,6 +731,39 @@ images: [
     "https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/592482659_823834943974130_5025675012969764396_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xvU0coTLBCMQ7kNvwEJKIzP&_nc_oc=Adp9zdYmBh_n2WnWA-maKjzQ-Yx17byzhVeXxtJvQyw9EVZSMmXO3zJsX26842mcEnE&_nc_zt=23&_nc_ht=scontent.fcai20-5.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQA28P5WRuPWeLq-BzUenA8jsNiFv8uC683D94g9xOav5Q&oe=6A6B94E3"
   ]
 },
+
+{
+  slug: "kuwait-facilities-management-conference-2026",
+  title: "Arab Security Gulf Participates in the 1st Kuwait Facilities Management Conference & Exhibition",
+  subtitle: "Driving Innovation in Smart Security & Facilities Management",
+  description:
+    "Arab Security Gulf proudly participated in the 1st Kuwait Facilities Management Conference & Exhibition, connecting with facility management professionals, technology innovators, and industry leaders while showcasing advanced smart security and integrated facility management solutions.",
+
+  fullDescription: `
+Arab Security Gulf proudly participated in the 1st Kuwait Facilities Management Conference & Exhibition, held at the Radisson Blu Hotel in Kuwait.
+
+Throughout the event, our team engaged with facility management experts, consultants, and technology leaders, presenting the latest innovations in smart security, integrated facility management, surveillance systems, access control, AI-powered monitoring, and intelligent building technologies.
+
+The exhibition provided an excellent opportunity to exchange knowledge, strengthen strategic partnerships, and explore the evolving future of facility management across the Gulf region.
+
+Arab Security Gulf remains committed to delivering cutting-edge security and smart infrastructure solutions that support safer, smarter, and more sustainable facilities.
+  `,
+
+  date: "Oct 2025",
+  location: "Radisson Blu Hotel, Kuwait",
+  category: "Industry Event",
+
+  images: [
+    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/565666135_783565471334411_4239091859273042747_n.jpg",
+    "https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/565118288_783565614667730_8432837965019888900_n.jpg",
+    "https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/565127683_783565718001053_4238064469059506449_n.jpg",
+    "https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/565142788_783566051334353_6887173164142340434_n.jpg",
+    "https://scontent.fcai20-3.fna.fbcdn.net/v/t39.30808-6/565619740_783566021334356_6335831021493803396_n.jpg",
+    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/565312420_783566161334342_318354886469101583_n.jpg",
+    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/565640561_783566168001008_662513688703867529_n.jpg"
+  ]
+},
+  
 ];
 
 export const companyInfo = {
