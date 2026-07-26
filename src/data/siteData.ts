@@ -560,15 +560,52 @@ export const events = [
       'https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/701651635_960530600304563_8736194490313966316_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=AGhhcb2jLVwQ7kNvwEv8axx&_nc_oc=AdpHWw36IPlyi4FrjFM11BMEd6MV478douuPfRv3U2sLCwZ1glegTATI2kZS3AOs2kk&_nc_zt=23&_nc_ht=scontent.fcai20-5.fna&_nc_gid=GsCxVbiq172-bwC3sHG2Tg&_nc_ss=7b2a8&oh=00_AQDMC_aK2tVYPAxV21rZB7T44-mhcmfCOIjruyo9tP101Q&oe=6A667BAC',
       'https://scontent.fcai20-2.fna.fbcdn.net/v/t39.30808-6/699572960_960530830304540_1034421045545861301_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iLji7r9Ns8gQ7kNvwHBjg08&_nc_oc=AdopqvYZHN6K-oS5E9FFV30bVw-pRy6OSSBCLiBLPaA2XPAzHGEpyiAdjyoC3s3aK8Q&_nc_zt=23&_nc_ht=scontent.fcai20-2.fna&_nc_gid=CnBufubjhm6ag4Elcu0hlw&_nc_ss=7b2a8&oh=00_AQDax91hbm_leWrp0pvFWO1W0lJZws3H2g93KUgie12Kkg&oe=6A666F06',
       'https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/701600503_960532050304418_1990906862941951962_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=icYRcRRaglkQ7kNvwF9IW42&_nc_oc=AdrQ0HuOzEvqeNpZdhFr3_XwCY2Hk7rCvTovCrxuOEgIiAd3GTgrF-26ta5puFe5flI&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&_nc_gid=PXZrPekOKkKTc_vrQrSCxA&_nc_ss=7b2a8&oh=00_AQD5HJpKxCcb6dHu8IeWEZFPA7OJUC-NGj9yPKsOUcLcOw&oe=6A6671A4',
-      'https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/701696865_960531493637807_1145905682485408223_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GZIkIJDhTjQQ7kNvwEuJ-CQ&_nc_oc=AdqbttKM_R6IC_RoQnw77XRu5LnoYHs0rK3t7hziSt9vkAKk-nXqO06K8Fm05CLR5WE&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&_nc_gid=_EPdLGkxNV7Tj8y50PXL-Q&_nc_ss=7b2a8&oh=00_AQCWyd1h8Fx_M1vSeE3vsvA8k3xDjgrWFUaFQGoAjabZA&oe=6A66740B',
       'https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/701582188_960531550304468_6816599792501150651_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JbE_mVw6gf8Q7kNvwEyD4QY&_nc_oc=AdrmrIdUVd371ia3k6Yfq_4oMzdz1mY3NefZgO0rDV6wWa1Gk0vFCh9PXaEfSLXeNBw&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=wpb-vfGe82NZYQUsB3saag&_nc_ss=7b2a8&oh=00_AQDmetIs9QsaLJZtN2qWSwc91XGQJTM0RzXp01SB16UcUg&oe=6A66760C',
       'https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/698536651_960531646971125_8209466658134383774_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KyPkvsINnuYQ7kNvwGax6l3&_nc_oc=AdrpsbOZHnj-KaELEMsuI25NZJ0f4Ynwv7HBIZA4XRdBKYZP4TiXe0nYotjYAsuSaXo&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=UXsdsEvpilcVG3SImycw4A&_nc_ss=7b2a8&oh=00_AQAoMfgkDyisbcBzQI3Lbyuxu_iagvoSnzuoLFBewvScqg&oe=6A668D7C',
       'https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/701612470_960531736971116_3012850009792121523_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x800&ctp=s1200x800&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Kl0ORed0Yk0Q7kNvwHahZZo&_nc_oc=AdoSMvPM3E-VeFChjxrLUbafTTlk2_OwN7qWeAboopKSUEq2CqgnPLQQs6EMeDfwVR8&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&_nc_gid=ZiROL5QdbfeGSHJERXPZ1g&_nc_ss=7b2a8&oh=00_AQDxscm06Q64q-VgsgQbXZc0s8J22ZLptJX_vkNgxLjdkw&oe=6A66733D'
     ],
-    hashtags: ['#ArabSecurityGulf', '#ASG', '#More_Secure_Than_Ever', '#Kuwait', '#Event', '#Huawei_eKit', '#BusinessBoundaries', '#Networking', '#Technology', '#Innovation'],
+    hashtags: ['#ArabSecurityGulf', '#ASG', '#Kuwait', '#Event', '#Huawei_eKit', '#BusinessBoundaries', '#Networking', '#Technology', '#Innovation'],
     speakers: [],
     schedule: []
   },
+
+{
+  id: "media-001",
+  slug: "gulf-forum-development-sustainable-projects-management",
+  title: "Arab Security Gulf Participates in the Gulf Forum for Development & Sustainable Projects Management",
+  excerpt:
+    "Arab Security Gulf proudly participated in the Gulf Forum for Development & Sustainable Projects Management, connecting with industry leaders and showcasing innovative security and smart technology solutions.",
+
+  content:
+    "Arab Security Gulf proudly participated in the Gulf Forum for Development & Sustainable Projects Management, reaffirming our commitment to supporting sustainable development through advanced security and smart technology solutions.\n\nDuring the event, our team had the opportunity to engage with industry leaders, exchange valuable insights, and discuss the latest trends in sustainable project management and digital transformation. The forum provided an excellent platform to strengthen partnerships, explore new opportunities, and demonstrate how innovative security technologies contribute to safer, smarter, and more sustainable environments.\n\nOur participation reflects Arab Security Gulf's ongoing mission to deliver intelligent, secure, and efficient solutions that empower businesses, government entities, and communities across the region.",
+
+  date: "2026-07-26",
+  category: "Events",
+
+  coverImage:
+    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/599491002_836499262707698_4775359694055293308_n.jpg",
+
+  galleryImages: [
+    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/599491002_836499262707698_4775359694055293308_n.jpg",
+    "https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/602292322_836499256041032_3224809738455810405_n.jpg",
+    "https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/600884710_836499236041034_4257460561312344202_n.jpg",
+    "https://scontent.fcai20-3.fna.fbcdn.net/v/t39.30808-6/605142457_836499259374365_7120906090925545578_n.jpg",
+  ],
+
+  tags: [
+    "Arab Security Gulf",
+    "ASG",
+    "Gulf Forum",
+    "Sustainability",
+    "Project Management",
+    "Innovation",
+    "Security Solutions",
+    "Smart Solutions",
+    "Kuwait",
+    "Events",
+  ],
+}
+  
   {
     id: "kuwait-security-expo-2026",
     slug: "kuwait-security-expo-2026",
