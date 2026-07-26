@@ -749,7 +749,7 @@ The exhibition provided an excellent opportunity to exchange knowledge, strength
 Arab Security Gulf remains committed to delivering cutting-edge security and smart infrastructure solutions that support safer, smarter, and more sustainable facilities.
   `,
 
-  date: "Oct 2025",
+  date: "October 2025",
   location: "Radisson Blu Hotel, Kuwait",
   category: "Industry Event",
 
@@ -761,6 +761,34 @@ Arab Security Gulf remains committed to delivering cutting-edge security and sma
     "https://scontent.fcai20-3.fna.fbcdn.net/v/t39.30808-6/565619740_783566021334356_6335831021493803396_n.jpg",
     "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/565312420_783566161334342_318354886469101583_n.jpg",
     "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/565640561_783566168001008_662513688703867529_n.jpg"
+  ]
+},
+  {
+  slug: "huawei-connect-china-visit-2025",
+  title: "Arab Security Gulf Team Visits China for Huawei Connect 2025",
+  subtitle: "Strengthening Global Partnerships & Driving Digital Transformation",
+  description:
+    "Arab Security Gulf participated in an exclusive visit to China alongside Huawei's Top Resellers, attending Huawei Connect 2025 and exploring the latest innovations in networking, communications, and digital transformation.",
+
+  fullDescription: `
+Arab Security Gulf proudly participated in an exclusive business visit to China in collaboration with Huawei, joining the region's Top Huawei Resellers to attend Huawei Connect 2025.
+
+During the visit, the ASG team explored Huawei's latest innovations in networking, communications, cloud technologies, artificial intelligence, and digital transformation solutions. The event provided valuable opportunities to exchange expertise, discover emerging technologies, and strengthen strategic partnerships with Huawei and industry leaders from around the world.
+
+This participation reflects Arab Security Gulf's ongoing commitment to bringing world-class technologies and innovative solutions to the Gulf region while supporting customers on their digital transformation journey.
+
+By strengthening its collaboration with Huawei, Arab Security Gulf continues to deliver cutting-edge ICT and smart infrastructure solutions that help organizations embrace the future with confidence.
+  `,
+
+  date: "October 2025",
+  location: "Shanghai, China",
+  category: "Technology Conference",
+
+  images: [
+    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/559368958_772856569071968_2999679046450053127_n.jpg",
+    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/559365907_772856625738629_4842011578074073290_n.jpg",
+    "https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/558868001_772857699071855_3939824441643591212_n.jpg",
+    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/558562595_772857889071836_415923734395859454_n.jpg"
   ]
 },
   
