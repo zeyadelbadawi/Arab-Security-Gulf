@@ -1179,12 +1179,13 @@ export function MediaPage() {
                   className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#fd6909]/20 transition-all duration-300">
                 
 {event.images.length > 0 && (
-  <div className="bg-gray-100 relative flex items-center justify-center p-3">
+  <div className="relative h-64 bg-gray-100 flex items-center justify-center overflow-hidden">
     <img
       src={event.images[0]}
       alt={event.title}
-      className="w-full h-auto max-h-[350px] object-contain group-hover:scale-105 transition-transform duration-300"
+      className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
     />
+
     <span className="absolute top-4 left-4 text-xs bg-[#fd6909] text-white px-3 py-1 rounded-full font-semibold">
       {event.category}
     </span>
