@@ -591,38 +591,72 @@ export const events = [
     "https://scontent.fcai20-3.fna.fbcdn.net/v/t39.30808-6/605142457_836499259374365_7120906090925545578_n.jpg"
   ]
 },  
-  {
-    id: "kuwait-security-expo-2026",
-    slug: "kuwait-security-expo-2026",
-    title: "Kuwait Security Expo 2026",
-    subtitle: "Showcasing the Future of Security Technology",
-    date: "March 10-12, 2026",
-    location: "Kuwait City Convention Center, Kuwait",
-    category: "Industry Exhibition",
-    description: "ASG showcases its latest AI-powered security and smart building solutions at Kuwait Security Expo 2026, one of the region's premier security industry events.",
-    fullContent: `
-      <h3>Exhibition Overview</h3>
-      <p>Arab Security Gulf presented its comprehensive portfolio of security solutions, including integrated security systems, video surveillance, access control, fire safety, and smart building technologies.</p>
-      
-      <h3>Featured Products & Services</h3>
-      <ul>
-        <li>AI-Powered Video Analytics & Facial Recognition</li>
-        <li>Advanced Access Control Systems</li>
-        <li>Integrated Fire & Life Safety Solutions</li>
-        <li>Smart Building Management Platforms</li>
-        <li>Cybersecurity-Integrated Solutions</li>
-      </ul>
-      
-      <h3>Live Demonstrations</h3>
-      <p>Visitors experienced hands-on demonstrations of cutting-edge security technologies, with expert consultants available to discuss customized solutions for various industry sectors.</p>
-    `,
-    images: [
-      'https://mgx-backend-cdn.metadl.com/generate/images/967905/2026-05-13/ook7zryaagqa/hero-homepage-kuwait-skyline.png',
-    ],
-    hashtags: ['#KuwaitSecurityExpo', '#ASG', '#SecurityTechnology', '#Innovation'],
-    speakers: [],
-    schedule: []
-  },
+{
+  id: "gulf-forum-development-sustainable-projects-management",
+  slug: "gulf-forum-development-sustainable-projects-management",
+
+  title: "Arab Security Gulf Participates in the Gulf Forum for Development & Sustainable Projects Management",
+
+  subtitle: "Supporting Sustainable Development Across the Gulf",
+
+  date: "July 2026",
+
+  location: "Kuwait",
+
+  category: "Industry Event",
+
+  description:
+    "Arab Security Gulf proudly participated in the Gulf Forum for Development & Sustainable Projects Management, connecting with industry leaders and showcasing innovative security and smart technology solutions.",
+
+  fullContent: `
+    <h3>Event Overview</h3>
+
+    <p>
+      Arab Security Gulf proudly participated in the Gulf Forum for Development &
+      Sustainable Projects Management, reaffirming our commitment to supporting
+      sustainable development through advanced security and smart technology
+      solutions.
+    </p>
+
+    <h3>Highlights</h3>
+
+    <ul>
+      <li>Networking with industry leaders and decision makers.</li>
+      <li>Exploring innovative solutions for sustainable projects.</li>
+      <li>Sharing expertise in integrated security technologies.</li>
+      <li>Strengthening partnerships across the Gulf region.</li>
+    </ul>
+
+    <h3>Our Commitment</h3>
+
+    <p>
+      Our participation reflects Arab Security Gulf's ongoing mission to deliver
+      smart, secure, and efficient solutions that empower businesses,
+      organizations, and communities.
+    </p>
+  `,
+
+  images: [
+    "...",
+    "...",
+    "...",
+    "..."
+  ],
+
+  hashtags: [
+    "#ArabSecurityGulf",
+    "#ASG",
+    "#Kuwait",
+    "#SustainableProjects",
+    "#Development",
+    "#Security",
+    "#Innovation"
+  ],
+
+  speakers: [],
+
+  schedule: []
+}
 ];
 
 export const companyInfo = {
