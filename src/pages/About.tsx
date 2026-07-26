@@ -757,7 +757,7 @@ export function ProjectDetail() {
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black mb-4">
                       <video
                         preload="metadata"
-                        className="w-full h-full object-cover"
+                        
                         src={`${v.url}#t=2`}
                         muted
                         playsInline
@@ -1178,12 +1178,19 @@ export function MediaPage() {
                 <Link key={event.slug} to={`/media/${event.slug}`}
                   className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#fd6909]/20 transition-all duration-300">
                   {/* Event Image */}
-                  {event.images.length > 0 && (
-                    <div className="h-48 overflow-hidden bg-gray-200 relative">
-                      <img src={event.images[0]} alt={event.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                      <span className="absolute top-4 left-4 text-xs bg-[#fd6909] text-white px-3 py-1 rounded-full font-semibold">{event.category}</span>
-                    </div>
-                  )}
+                  {/* Event Image */}
+{event.images.length > 0 && (
+  <div className="h-48 overflow-hidden bg-gray-200 relative">
+    <img
+      src={event.images[0]}
+      alt={event.title}
+      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+    />
+    <span className="absolute top-4 left-4 text-xs bg-[#fd6909] text-white px-3 py-1 rounded-full font-semibold">
+      {event.category}
+    </span>
+  </div>
+)}
                   
                   {/* Event Details */}
                   <div className="p-6">
