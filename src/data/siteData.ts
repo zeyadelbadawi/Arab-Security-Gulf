@@ -791,7 +791,34 @@ By strengthening its collaboration with Huawei, Arab Security Gulf continues to 
     "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/558562595_772857889071836_415923734395859454_n.jpg"
   ]
 },
-  
+  {
+  slug: "huawei-ekit-distributor-training-kuwait-2025",
+  title: "Arab Security Gulf Hosts Huawei eKit Training for Kuwait Distributors",
+  subtitle: "Empowering Partners with the Latest Huawei eKit Solutions",
+  description:
+    "Arab Security Gulf, Huawei's Gold Partner in Kuwait, hosted an exclusive Huawei eKit training session for distributors, showcasing the latest networking solutions, deployment best practices, and product innovations.",
+
+  fullDescription: `
+Arab Security Gulf proudly hosted an exclusive Huawei eKit training session for distributors in Kuwait as part of its ongoing strategic partnership with Huawei.
+
+The training brought together Arab Security Gulf's team and business partners to explore Huawei's latest eKit solutions, covering product features, configuration best practices, deployment scenarios, and the newest innovations in networking and ICT infrastructure.
+
+Participants gained valuable technical knowledge through practical demonstrations and discussions focused on helping partners deliver smarter, more efficient networking solutions to customers across Kuwait.
+
+As Huawei's Gold Partner in Kuwait, Arab Security Gulf remains committed to empowering its partners through continuous technical training, knowledge sharing, and access to the latest technologies, supporting digital transformation initiatives across the region.
+  `,
+
+  date: "August 2025",
+  location: "Kuwait",
+  category: "Partner Training",
+
+  images: [
+    "https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/539484529_739716542385971_8112775340730265958_n.jpg",
+    "https://scontent.fcai20-2.fna.fbcdn.net/v/t39.30808-6/539035631_739716745719284_885977040584300728_n.jpg",
+    "https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/537595727_739716899052602_3952121644303449967_n.jpg",
+    "https://scontent.fcai20-2.fna.fbcdn.net/v/t39.30808-6/538968849_739716925719266_2602417493740389776_n.jpg"
+  ]
+},
 ];
 
 export const companyInfo = {
