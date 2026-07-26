@@ -731,27 +731,52 @@ images: [
     "https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/592482659_823834943974130_5025675012969764396_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xvU0coTLBCMQ7kNvwEJKIzP&_nc_oc=Adp9zdYmBh_n2WnWA-maKjzQ-Yx17byzhVeXxtJvQyw9EVZSMmXO3zJsX26842mcEnE&_nc_zt=23&_nc_ht=scontent.fcai20-5.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQA28P5WRuPWeLq-BzUenA8jsNiFv8uC683D94g9xOav5Q&oe=6A6B94E3"
   ]
 },
-
 {
-  slug: "kuwait-facilities-management-conference-2026",
-  title: "Arab Security Gulf Participates in the 1st Kuwait Facilities Management Conference & Exhibition",
-  subtitle: "Driving Innovation in Smart Security & Facilities Management",
-  description:
-    "Arab Security Gulf proudly participated in the 1st Kuwait Facilities Management Conference & Exhibition, connecting with facility management professionals, technology innovators, and industry leaders while showcasing advanced smart security and integrated facility management solutions.",
+  id: "kuwait-facilities-management-conference-2025",
+  slug: "kuwait-facilities-management-conference-2025",
 
-  fullDescription: `
-Arab Security Gulf proudly participated in the 1st Kuwait Facilities Management Conference & Exhibition, held at the Radisson Blu Hotel in Kuwait.
+  title:
+    "Arab Security Gulf Participates in the 1st Kuwait Facilities Management Conference & Exhibition",
 
-Throughout the event, our team engaged with facility management experts, consultants, and technology leaders, presenting the latest innovations in smart security, integrated facility management, surveillance systems, access control, AI-powered monitoring, and intelligent building technologies.
-
-The exhibition provided an excellent opportunity to exchange knowledge, strengthen strategic partnerships, and explore the evolving future of facility management across the Gulf region.
-
-Arab Security Gulf remains committed to delivering cutting-edge security and smart infrastructure solutions that support safer, smarter, and more sustainable facilities.
-  `,
+  subtitle:
+    "Driving Innovation in Smart Security & Facilities Management",
 
   date: "October 2025",
+
   location: "Radisson Blu Hotel, Kuwait",
+
   category: "Industry Event",
+
+  description:
+    "Arab Security Gulf proudly participated in the 1st Kuwait Facilities Management Conference & Exhibition, showcasing advanced smart security and integrated facility management solutions.",
+
+  fullContent: `
+    <h3>Event Overview</h3>
+
+    <p>
+      Arab Security Gulf proudly participated in the 1st Kuwait Facilities Management Conference & Exhibition held at the Radisson Blu Hotel in Kuwait.
+    </p>
+
+    <p>
+      Throughout the event, our team engaged with facility management experts, consultants, and technology leaders while presenting the latest innovations in smart security, surveillance systems, access control, AI-powered monitoring, and intelligent building technologies.
+    </p>
+
+    <h3>Highlights</h3>
+
+    <ul>
+      <li>Presented smart security and integrated facility management solutions.</li>
+      <li>Connected with facility management professionals and consultants.</li>
+      <li>Showcased AI-powered monitoring and surveillance technologies.</li>
+      <li>Strengthened strategic partnerships across the Gulf region.</li>
+      <li>Explored the future of intelligent buildings and smart infrastructure.</li>
+    </ul>
+
+    <h3>Our Commitment</h3>
+
+    <p>
+      Arab Security Gulf remains committed to delivering cutting-edge security and smart infrastructure solutions that support safer, smarter, and more sustainable facilities.
+    </p>
+  `,
 
   images: [
     "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/565666135_783565471334411_4239091859273042747_n.jpg",
@@ -761,7 +786,21 @@ Arab Security Gulf remains committed to delivering cutting-edge security and sma
     "https://scontent.fcai20-3.fna.fbcdn.net/v/t39.30808-6/565619740_783566021334356_6335831021493803396_n.jpg",
     "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/565312420_783566161334342_318354886469101583_n.jpg",
     "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/565640561_783566168001008_662513688703867529_n.jpg"
-  ]
+  ],
+
+  hashtags: [
+    "#ArabSecurityGulf",
+    "#ASG",
+    "#FacilitiesManagement",
+    "#SmartSecurity",
+    "#Innovation",
+    "#Kuwait",
+    "#Technology"
+  ],
+
+  speakers: [],
+
+  schedule: []
 },
   {
   slug: "huawei-connect-china-visit-2025",
