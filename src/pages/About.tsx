@@ -1177,14 +1177,13 @@ export function MediaPage() {
               {events.map((event) => (
                 <Link key={event.slug} to={`/media/${event.slug}`}
                   className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#fd6909]/20 transition-all duration-300">
-                  {/* Event Image */}
-                  {/* Event Image */}
+                
 {event.images.length > 0 && (
-  <div className="h-48 overflow-hidden bg-gray-200 relative">
+  <div className="bg-gray-100 relative flex items-center justify-center p-3">
     <img
       src={event.images[0]}
       alt={event.title}
-      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      className="w-full h-auto max-h-[350px] object-contain group-hover:scale-105 transition-transform duration-300"
     />
     <span className="absolute top-4 left-4 text-xs bg-[#fd6909] text-white px-3 py-1 rounded-full font-semibold">
       {event.category}
