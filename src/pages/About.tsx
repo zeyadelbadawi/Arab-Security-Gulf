@@ -1440,19 +1440,15 @@ export function ContactPage() {
         <p className="text-gray-500 text-sm mt-2 leading-relaxed">
           12th Floor, Alsoor Street
           <br />
-          Kuwait City 15000
-          <br />
-          Kuwait
+          Kuwait City 15000, Kuwait          
         </p>
 
-        <div className="mt-4 inline-flex items-center rounded-full bg-[#fd6909]/10 px-3 py-1 text-xs font-semibold text-[#fd6909]">
-          Corporate Office
-        </div>
+  
       </div>
 
       {/* Branch & Service Center */}
       <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1B2A4A] to-[#2d4270] flex items-center justify-center mb-4">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1B2A4A] to-[#1B2A4A] flex items-center justify-center mb-4">
           <Building2 className="w-6 h-6 text-white" />
         </div>
 
@@ -1461,19 +1457,14 @@ export function ContactPage() {
         </h3>
 
         <p className="text-gray-500 text-sm mt-2 leading-relaxed">
-          Bin Khaldoun Street
+          Bin Khaldoun Street, Al Bassam Complex 2
           <br />
-          Al Bassam Complex 2
-          <br />
-          First Floor
-          <br />
-          Hawally, Kuwait
+           First Floor, Hawally, Kuwait
+     
+          
         </p>
 
-        <div className="mt-4 inline-flex items-center rounded-full bg-[#1B2A4A]/10 px-3 py-1 text-xs font-semibold text-[#1B2A4A]">
-          Service Center
-        </div>
-      </div>
+      
 
       {/* Phone Card */}
       <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
