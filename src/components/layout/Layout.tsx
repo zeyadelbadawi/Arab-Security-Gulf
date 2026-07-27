@@ -654,9 +654,30 @@ function Footer() {
             <p className="text-white/50 text-sm leading-relaxed mb-6">{companyInfo.description}</p>
             <div className="space-y-3">
               <div className="flex items-start gap-2 text-white/40 text-sm">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>{companyInfo.offices[0].address}, {companyInfo.offices[0].city}, {companyInfo.offices[0].country}</span>
-              </div>
+  <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+
+  <div className="space-y-3">
+    <div>
+      <p className="text-white/70 text-xs font-semibold uppercase tracking-wide mb-1">
+        Headquarters
+      </p>
+      <p>
+        Alsoor St, Burj Jassem, Floor 12, Kuwait
+      </p>
+    </div>
+
+    <div>
+      <p className="text-white/70 text-xs font-semibold uppercase tracking-wide mb-1">
+        Branch & Service Center
+      </p>
+      <p>
+        Bin Khaldoun Street, Al Bassam Complex 2,
+        <br />
+        First Floor, Hawally, Kuwait
+      </p>
+    </div>
+  </div>
+</div>
               <a href={`tel:${companyInfo.offices[0].phone}`} className="flex items-center gap-2 text-white/40 text-sm hover:text-[#fd6909] transition-colors">
                 <Phone className="w-4 h-4" /> {companyInfo.offices[0].phone}
               </a>
