@@ -1464,7 +1464,7 @@ export function ContactPage() {
           
         </p>
 
-      
+      </div>
 
       {/* Phone Card */}
       <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
