@@ -1422,45 +1422,103 @@ export function ContactPage() {
       </section>
 
       {/* Contact Info Cards - Floating over map transition */}
-      <section className="relative -mt-20 z-10 xpb-8">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {/* Location Card */}
-            <div className="bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#fd6909] to-[#ff8c3a] flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-base font-bold text-[#1B2A4A]">Our Location</h3>
-              <p className="text-gray-500 text-sm mt-2 leading-relaxed">
-                12 Floor, Alsoor St<br />Kuwait City 15000, Kuwait
-              </p>
-            </div>
+      {/* Contact Info Cards - Floating over map transition */}
+<section className="relative -mt-20 z-10 pb-8">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
 
-            {/* Phone Card */}
-            <div className="bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1B2A4A] to-[#2d4270] flex items-center justify-center mb-4">
-                <Phone className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-base font-bold text-[#1B2A4A]">Call Us</h3>
-              <p className="text-gray-500 text-sm mt-2">{headquarters?.phone}</p>
-              <p className="text-gray-400 text-xs mt-1">Sun - Thu, 8AM - 5PM</p>
-            </div>
-
-            {/* Email Card */}
-            <div className="bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#fd6909] to-[#ff8c3a] flex items-center justify-center mb-4">
-                <Mail className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-base font-bold text-[#1B2A4A]">Email Us</h3>
-              <a href={`mailto:${companyInfo.email}`} className="text-[#fd6909] text-sm font-medium mt-2 block hover:underline">
-                {companyInfo.email}
-              </a>
-              <p className="text-gray-400 text-xs mt-1">We reply within 24 hours</p>
-            </div>
-          </div>
+      {/* Headquarters */}
+      <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#fd6909] to-[#ff8c3a] flex items-center justify-center mb-4">
+          <Building2 className="w-6 h-6 text-white" />
         </div>
-      </section>
 
+        <h3 className="text-base font-bold text-[#1B2A4A]">
+          Headquarters
+        </h3>
+
+        <p className="text-gray-500 text-sm mt-2 leading-relaxed">
+          12th Floor, Alsoor Street
+          <br />
+          Kuwait City 15000
+          <br />
+          Kuwait
+        </p>
+
+        <div className="mt-4 inline-flex items-center rounded-full bg-[#fd6909]/10 px-3 py-1 text-xs font-semibold text-[#fd6909]">
+          Corporate Office
+        </div>
+      </div>
+
+      {/* Branch & Service Center */}
+      <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1B2A4A] to-[#2d4270] flex items-center justify-center mb-4">
+          <Building2 className="w-6 h-6 text-white" />
+        </div>
+
+        <h3 className="text-base font-bold text-[#1B2A4A]">
+          Branch & Service Center
+        </h3>
+
+        <p className="text-gray-500 text-sm mt-2 leading-relaxed">
+          Bin Khaldoun Street
+          <br />
+          Al Bassam Complex 2
+          <br />
+          First Floor
+          <br />
+          Hawally, Kuwait
+        </p>
+
+        <div className="mt-4 inline-flex items-center rounded-full bg-[#1B2A4A]/10 px-3 py-1 text-xs font-semibold text-[#1B2A4A]">
+          Service Center
+        </div>
+      </div>
+
+      {/* Phone Card */}
+      <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#fd6909] to-[#ff8c3a] flex items-center justify-center mb-4">
+          <Phone className="w-6 h-6 text-white" />
+        </div>
+
+        <h3 className="text-base font-bold text-[#1B2A4A]">
+          Call Us
+        </h3>
+
+        <p className="text-gray-500 text-sm mt-2">
+          {headquarters?.phone}
+        </p>
+
+        <p className="text-gray-400 text-xs mt-1">
+          Sun - Thu, 8:00 AM - 5:00 PM
+        </p>
+      </div>
+
+      {/* Email Card */}
+      <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#fd6909] to-[#ff8c3a] flex items-center justify-center mb-4">
+          <Mail className="w-6 h-6 text-white" />
+        </div>
+
+        <h3 className="text-base font-bold text-[#1B2A4A]">
+          Email Us
+        </h3>
+
+        <a
+          href={`mailto:${companyInfo.email}`}
+          className="text-[#fd6909] text-sm font-medium mt-2 block hover:underline break-all"
+        >
+          {companyInfo.email}
+        </a>
+
+        <p className="text-gray-400 text-xs mt-1">
+          We reply within 24 hours
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* Main Contact Form Section */}
       <section className="py-16 bg-[#f8f9fc]">
         <div className="max-w-7xl mx-auto px-6">
