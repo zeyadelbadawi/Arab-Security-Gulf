@@ -874,7 +874,81 @@ images: [
 
   schedule: []
 },
+{
+  id: "huawei-ekit-training-2025",
+  slug: "huawei-ekit-training-2025",
 
+  title: "Huawei eKit Training Session Hosted by Arab Security Gulf",
+
+  subtitle: "Empowering Partners with the Latest Huawei eKit Solutions",
+
+  date: "May 2025",
+
+  location: "Kuwait",
+
+  category: "Training Event",
+
+  description:
+    "Arab Security Gulf hosted an exclusive Huawei eKit training session for its team and valued partners, exploring the latest product innovations, configuration best practices, and deployment scenarios.",
+
+  fullContent: `
+    <h3>Event Overview</h3>
+
+    <p>
+      Arab Security Gulf proudly hosted an insightful Huawei eKit training session,
+      bringing together our team and valued business partners to deepen their
+      knowledge of Huawei's latest eKit solutions and technologies.
+    </p>
+
+    <p>
+      The session covered Huawei eKit product features, configuration best
+      practices, deployment scenarios, and practical implementation strategies,
+      enabling participants to deliver greater value through advanced networking
+      and ICT solutions.
+    </p>
+
+    <h3>Training Highlights</h3>
+
+    <ul>
+      <li>Introduction to the latest Huawei eKit product portfolio.</li>
+      <li>Hands-on guidance on configuration best practices.</li>
+      <li>Deployment scenarios for real-world business environments.</li>
+      <li>Knowledge sharing between Huawei experts and ASG partners.</li>
+      <li>Strengthening technical expertise and collaboration.</li>
+    </ul>
+
+    <h3>Looking Ahead</h3>
+
+    <p>
+      As Huawei's Golden Partner in Kuwait, Arab Security Gulf remains committed
+      to equipping its partners with the latest technologies and technical
+      expertise. We look forward to delivering more innovative solutions and
+      empowering businesses with cutting-edge Huawei eKit technologies.
+    </p>
+  `,
+
+  images: [
+    "https://imoukuwait.com/wp-content/uploads/2026/07/492849564_667555302935429_8065589518240916274_n-1.jpg",
+    "https://imoukuwait.com/wp-content/uploads/2026/07/494990206_667555016268791_5041882702195912479_n-1.jpg"
+  ],
+
+  hashtags: [
+    "#ArabSecurityGulf",
+    "#ASG",
+    "#Huawei",
+    "#HuaweiEKit",
+    "#GoldenPartner",
+    "#Training",
+    "#Networking",
+    "#ICT",
+    "#Innovation",
+    "#Kuwait"
+  ],
+
+  speakers: [],
+
+  schedule: []
+},
 ];
 
 export const companyInfo = {
