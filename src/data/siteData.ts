@@ -617,13 +617,10 @@ export const events = [
   `,
 
 images: [
-  "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/599491002_836499262707698_4775359694055293308_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ODSB-cPyE3AQ7kNvwGmaOKD&_nc_oc=AdpmK5VM0KrMQXDV7YxKUJ-v1DnfOSWK_BN1FFB71jUsLvAHplmweeI0i0KVyAqH92E&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=TSLrbUW8kZePFzb8tpB_KA&_nc_ss=7b2a8&oh=00_AQAdABOWIKYrBz1jyaa2QJOYqFiNjGgyk-3nKFiaffTUCw&oe=6A6BB58F",
-
-  "https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/602292322_836499256041032_3224809738455810405_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Rx9-ceYuRE8Q7kNvwHBr5G2&_nc_oc=AdrBbUWEM8ilQEOI8SyTMUfhiGmWA71fHCuGJSz3tou9vG8GC9YaN0tAxIs5-OD1zTw&_nc_zt=23&_nc_ht=scontent.fcai20-5.fna&_nc_gid=TSLrbUW8kZePFzb8tpB_KA&_nc_ss=7b2a8&oh=00_AQBwvq0CZ2uW52hO4FQMaItomfWpsWX2oTrp9evUbRgPUg&oe=6A6B9118",
-
-  "https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/600884710_836499236041034_4257460561312344202_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=PFrIR8SFk24Q7kNvwEaPMg_&_nc_oc=AdrQt4fMhqvZCQlx7tLlyxKT9y_XyRWnLJ8XVxImZmfglr_AGIZBVzqVCIE-UshXpTc&_nc_zt=23&_nc_ht=scontent.fcai20-1.fna&_nc_gid=TSLrbUW8kZePFzb8tpB_KA&_nc_ss=7b2a8&oh=00_AQCYgjT2eqAIl2-femdolnccTeMYV0gfPo26xcbuxEBWTA&oe=6A6B8FCF",
-
-  "https://scontent.fcai20-3.fna.fbcdn.net/v/t39.30808-6/605142457_836499259374365_7120906090925545578_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=6sbOx3_gWEAQ7kNvwFiu8c6&_nc_oc=Adrj0E__7ukCNYeeNWQVyck6uIl0CmQGOwkxh6tF6bb7AQJOUB2bTGfH2WzldPZi5hw&_nc_zt=23&_nc_ht=scontent.fcai20-3.fna&_nc_gid=TSLrbUW8kZePFzb8tpB_KA&_nc_ss=7b2a8&oh=00_AQCuQZ8u4ScAVKo0_BL9gQu16M4QRrUoJZ5Eup-OVIFaxg&oe=6A6BA165"
+  "https://imoukuwait.com/wp-content/uploads/2026/07/605142457_836499259374365_7120906090925545578_n.jpg ",
+ " https://imoukuwait.com/wp-content/uploads/2026/07/600884710_836499236041034_4257460561312344202_n.jpg",
+   "https://imoukuwait.com/wp-content/uploads/2026/07/602292322_836499256041032_3224809738455810405_n.jpg ",
+   "https://imoukuwait.com/wp-content/uploads/2026/07/599491002_836499262707698_4775359694055293308_n.jpg ",
 ],
 
   hashtags: [
@@ -722,15 +719,15 @@ images: [
   schedule: [],
 
   images: [
-    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/594959181_823834957307462_8508854969315454680_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=x6l8YQgvEc0Q7kNvwHnnmQR&_nc_oc=Adr0paIyVovNbo7NsyICs1SsUeLlJcS2wlGcCCLzirBcDP_qKm4wXQ9AfTLPLSjFG_Y&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQBQID-tjL4UtHhYlfgXGHinAxI6ECr_YNuJLhYDNrrlVw&oe=6A6BA6A6",
+"https://imoukuwait.com/wp-content/uploads/2026/07/593782140_823834903974134_6897880879457201860_n.jpg",
 
-    "https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/593782140_823834903974134_6897880879457201860_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iSlSwJ_796AQ7kNvwG2h5Jm&_nc_oc=Adpb6vOZSfqKaq8eKEgikabEjFb4zE_mcON3A3N6w3rIyN1p0_zHQJtqREbn7rgsX5Y&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQBl97cenG1rtTIvSg5bJ3-LBO8bVRAt0-Wrj0eKn6h-MA&oe=6A6B8D74",
+    "https://imoukuwait.com/wp-content/uploads/2026/07/592482659_823834943974130_5025675012969764396_n.jpg",
 
-    "https://scontent.fcai20-3.fna.fbcdn.net/v/t39.30808-6/593946242_823834890640802_6434931984325120602_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=usAAs1fEZLQQ7kNvwFxXMac&_nc_oc=AdofZcuoOUc4ylg0UpclFUq8q-breMOLsPTzPOvf2WvmHBiFjbzTnMWmNTicohEfdzU&_nc_zt=23&_nc_ht=scontent.fcai20-3.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQCltB5P8Hk-ikuC16wtH1lJFMidgO0k3UlnV7WROjbkOQ&oe=6A6BB5BB",
+"https://imoukuwait.com/wp-content/uploads/2026/07/593946242_823834890640802_6434931984325120602_n.jpg",
 
-    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/594699652_823834950640796_5870196529908804280_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=uNjTNOYhTNUQ7kNvwHX7N3u&_nc_oc=AdoGY55ZrRsGOy-Z0sLZXTt0UGQfWTRhqnp1tmIw9yC_XaQpPXfmefqcDWxfqQHTvqM&_nc_zt=23&_nc_ht=scontent.fcai20-4.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQCxv48L6-gH-M0A2ZwIkNAIhQ1wVWyB8VH_GC0OKqOHFA&oe=6A6BB585",
+"https://imoukuwait.com/wp-content/uploads/2026/07/594699652_823834950640796_5870196529908804280_n.jpg",
 
-    "https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/592482659_823834943974130_5025675012969764396_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s1280x1280&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xvU0coTLBCMQ7kNvwEJKIzP&_nc_oc=Adp9zdYmBh_n2WnWA-maKjzQ-Yx17byzhVeXxtJvQyw9EVZSMmXO3zJsX26842mcEnE&_nc_zt=23&_nc_ht=scontent.fcai20-5.fna&_nc_gid=iTmTeSy9wF7P7xib0_ujFg&_nc_ss=7b2a8&oh=00_AQA28P5WRuPWeLq-BzUenA8jsNiFv8uC683D94g9xOav5Q&oe=6A6B94E3"
+"https://imoukuwait.com/wp-content/uploads/2026/07/594959181_823834957307462_8508854969315454680_n.jpg",
   ]
 },
 {
@@ -781,13 +778,13 @@ images: [
   `,
 
   images: [
-    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/565666135_783565471334411_4239091859273042747_n.jpg",
-    "https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-6/565118288_783565614667730_8432837965019888900_n.jpg",
-    "https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/565127683_783565718001053_4238064469059506449_n.jpg",
-    "https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/565142788_783566051334353_6887173164142340434_n.jpg",
-    "https://scontent.fcai20-3.fna.fbcdn.net/v/t39.30808-6/565619740_783566021334356_6335831021493803396_n.jpg",
-    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/565312420_783566161334342_318354886469101583_n.jpg",
-    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/565640561_783566168001008_662513688703867529_n.jpg"
+        " https://imoukuwait.com/wp-content/uploads/2026/07/566213368_783566164667675_7554150916336984397_n.jpg",
+
+    " https://imoukuwait.com/wp-content/uploads/2026/07/565619740_783566021334356_6335831021493803396_n.jpg",
+    " https://imoukuwait.com/wp-content/uploads/2026/07/565127683_783565718001053_4238064469059506449_n.jpg",
+    "https://imoukuwait.com/wp-content/uploads/2026/07/565118288_783565614667730_8432837965019888900_n.jpg ",
+    " https://imoukuwait.com/wp-content/uploads/2026/07/565666135_783565471334411_4239091859273042747_n.jpg",
+   
   ],
 
   hashtags: [
@@ -852,10 +849,12 @@ images: [
   `,
 
   images: [
-    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/559368958_772856569071968_2999679046450053127_n.jpg",
-    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/559365907_772856625738629_4842011578074073290_n.jpg",
-    "https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/558868001_772857699071855_3939824441643591212_n.jpg",
-    "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/558562595_772857889071836_415923734395859454_n.jpg"
+    " https://imoukuwait.com/wp-content/uploads/2026/07/559368958_772856569071968_2999679046450053127_n.jpg",
+    "https://imoukuwait.com/wp-content/uploads/2026/07/559365907_772856625738629_4842011578074073290_n.jpg ",
+    " https://imoukuwait.com/wp-content/uploads/2026/07/558868001_772857699071855_3939824441643591212_n.jpg",
+    "https://imoukuwait.com/wp-content/uploads/2026/07/558326974_772857775738514_3218378437027645634_n.jpg ",
+    " https://imoukuwait.com/wp-content/uploads/2026/07/558562595_772857889071836_415923734395859454_n.jpg",
+    " https://imoukuwait.com/wp-content/uploads/2026/07/560451544_772858015738490_3218058844981973066_n.jpg",
   ],
 
   hashtags: [
@@ -875,34 +874,7 @@ images: [
 
   schedule: []
 },
-  {
-  slug: "huawei-ekit-distributor-training-kuwait-2025",
-  title: "Arab Security Gulf Hosts Huawei eKit Training for Kuwait Distributors",
-  subtitle: "Empowering Partners with the Latest Huawei eKit Solutions",
-  description:
-    "Arab Security Gulf, Huawei's Gold Partner in Kuwait, hosted an exclusive Huawei eKit training session for distributors, showcasing the latest networking solutions, deployment best practices, and product innovations.",
 
-  fullDescription: `
-Arab Security Gulf proudly hosted an exclusive Huawei eKit training session for distributors in Kuwait as part of its ongoing strategic partnership with Huawei.
-
-The training brought together Arab Security Gulf's team and business partners to explore Huawei's latest eKit solutions, covering product features, configuration best practices, deployment scenarios, and the newest innovations in networking and ICT infrastructure.
-
-Participants gained valuable technical knowledge through practical demonstrations and discussions focused on helping partners deliver smarter, more efficient networking solutions to customers across Kuwait.
-
-As Huawei's Gold Partner in Kuwait, Arab Security Gulf remains committed to empowering its partners through continuous technical training, knowledge sharing, and access to the latest technologies, supporting digital transformation initiatives across the region.
-  `,
-
-  date: "August 2025",
-  location: "Kuwait",
-  category: "Partner Training",
-
-  images: [
-    "https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/539484529_739716542385971_8112775340730265958_n.jpg",
-    "https://scontent.fcai20-2.fna.fbcdn.net/v/t39.30808-6/539035631_739716745719284_885977040584300728_n.jpg",
-    "https://scontent.fcai20-6.fna.fbcdn.net/v/t39.30808-6/537595727_739716899052602_3952121644303449967_n.jpg",
-    "https://scontent.fcai20-2.fna.fbcdn.net/v/t39.30808-6/538968849_739716925719266_2602417493740389776_n.jpg"
-  ]
-},
 ];
 
 export const companyInfo = {
