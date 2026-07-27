@@ -665,6 +665,7 @@ function Footer() {
         Alsoor St, Burj Jassem, Floor 12, Kuwait
       </p>
     </div>
+  <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
 
     <div>
       <p className="text-white/70 text-xs font-semibold uppercase tracking-wide mb-1">
