@@ -71,9 +71,8 @@ function Header() {
     { label: "About Us", href: "/about", desc: "Our story, mission & values" },
     { label: "Clients", href: "/clients", desc: "Trusted by leading organizations" },
     { label: "Partners", href: "/partners", desc: "59+ technology partners" },
-    { label: "Media Center", href: "/media", desc: "News, events & press" },
+    { label: "Media Center", href: "/media", desc: "News, events & Training" },
     { label: "FAQs", href: "/faqs", desc: "Frequently asked questions" },
-    { label: "Training", href: "/training", desc: "Professional development courses" },
     { label: "Careers", href: "/careers", desc: "Join our growing team" },
   ];
 
