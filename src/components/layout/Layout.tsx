@@ -216,7 +216,7 @@ function Header() {
                 <Link
                   to="/about"
                   className={`flex items-center gap-1 px-4 py-2.5 text-sm font-semibold rounded-lg transition-all ${
-                    ["/about", "/clients", "/partners", "/media", "/faqs", "/training", "/careers"].some(p => location.pathname === p) || activeDropdown === "about"
+                    ["/about", "/clients", "/partners", "/media", "/faqs", "/careers"].some(p => location.pathname === p) || activeDropdown === "about"
                       ? "text-[#fd6909]"
                       : "text-[#1E2455] hover:text-[#fd6909]"
                   }`}
@@ -594,7 +594,6 @@ function Footer() {
         { label: "System Integration", href: "/services/system-integration" },
         { label: "Installation", href: "/services/installation-commissioning" },
         { label: "Maintenance & Support", href: "/services/maintenance-support" },
-        { label: "Training & Certification", href: "/services/training-certification" },
         { label: "Project Management", href: "/services/project-management" },
       ],
     },
@@ -614,7 +613,6 @@ function Footer() {
       links: [
         { label: "Industries", href: "/industries" },
         { label: "FAQs", href: "/faqs" },
-        { label: "Training", href: "/training" },
         { label: "Partner With Us", href: "/partner-with-us" },
         { label: "Request a Quote", href: "/request-quote" },
         { label: "Contact Us", href: "/contact" },
