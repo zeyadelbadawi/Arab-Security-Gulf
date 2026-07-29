@@ -592,9 +592,9 @@ export function ProjectDetail() {
   const project = projects.find((p) => p.slug === slug);
 
   const projectVideos = slug === "its-egypt-radar-smart-system" ? [
-    { id: "arabic", label: "Arabic Video", url: "https://imoukuwait.com/wp-content/uploads/2026/04/ASG-ITS-Solution-HQ.mp4" },
-    { id: "english", label: "English Video", url: "https://imoukuwait.com/wp-content/uploads/2026/05/ASG-English-Final.mp4" },
-    { id: "french", label: "French Video", url: "https://imoukuwait.com/wp-content/uploads/2026/05/ASG-French-Final.mp4" },
+    { id: "arabic", label: "Arabic Video", url: "https://imoukuwait.com/wp-content/uploads/2026/07/ASG-V2-Long-Arabic-Version_1.mp4" },
+    { id: "english", label: "English Video", url: "https://imoukuwait.com/wp-content/uploads/2026/07/ASG-V2-Long-English-Version_1mp4.mp4" },
+    { id: "french", label: "French Video", url: "https://imoukuwait.com/wp-content/uploads/2026/07/ASG-V2-Long-French-Version_1.mp4" },
   ] : [];
 
   const [playingVideo, setPlayingVideo] = useState<{ id: string; label: string; url: string } | null>(null);
