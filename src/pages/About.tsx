@@ -157,59 +157,6 @@ export function AboutPage() {
       </section>
 
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <span className="text-[#fd6909] text-sm font-bold uppercase tracking-widest">Our Headquarters</span>
-            <h2 className="text-3xl font-black text-[#1E2455] mt-3">Visit Us in Suadi Arabia</h2>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-[#1E2455] to-[#0a0e2a] rounded-3xl p-8 lg:p-10 relative overflow-hidden">
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#fd6909]/10 rounded-full -translate-y-1/2 translate-x-1/3" />
-              <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#fd6909]/5 rounded-full translate-y-1/2 -translate-x-1/4" />
-              <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <span className="inline-block bg-[#fd6909] text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-4">Headquarters</span>
-                  <h3 className="text-2xl font-black text-white">Arab Security Gulf, Suadi Arabia</h3>
-                  <div className="mt-5 space-y-3">
-                    <p className="flex items-start gap-3 text-white/80 text-sm">
-                      <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#fd6909]" />
-                      12 Floor, Alsoor St, Kuwait City 15000, Kuwait
-                    </p>
-                    <p className="flex items-center gap-3 text-white/80 text-sm">
-                      <Phone className="w-5 h-5 flex-shrink-0 text-[#fd6909]" />
-                      {companyInfo.offices.find((o) => o.type === "Headquarters")?.phone}
-                    </p>
-                    <a href={`mailto:${companyInfo.email}`} className="flex items-center gap-3 text-[#fd6909] text-sm font-medium hover:underline">
-                      <Mail className="w-5 h-5 flex-shrink-0" />
-                      {companyInfo.email}
-                    </a>
-                  </div>
-                  <div className="mt-6 pt-5 border-t border-white/10">
-                    <p className="text-white/50 text-xs uppercase tracking-wider mb-2">Working Hours</p>
-                    <p className="text-white/80 text-sm">Sunday – Thursday: 8:00 AM – 5:00 PM</p>
-                    <p className="text-red-400/80 text-sm mt-1">Friday & Saturday: Closed</p>
-                  </div>
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-2xl h-[250px]">
-                  <iframe
-                    title="Arab Security Gulf - Suadi Arabia"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.5!2d47.979745!3d29.3623127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf853ff6f56413%3A0xb351a7afbb65146e!2sArab%20Security%20Gulf!5e0!3m2!1sen!2skw!4v1700000000000!5m2!1sen!2skw"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       
       <section className="py-16 bg-gray-50">
