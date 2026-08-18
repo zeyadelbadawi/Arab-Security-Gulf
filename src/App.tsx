@@ -5,7 +5,7 @@ import SubSolutionPage from "@/pages/SubSolution";
 import ServicesPage from "@/pages/Services";
 import {
   AboutPage, IndustriesPage, IndustryDetail, ProjectsPage, ProjectDetail,
-  PartnersPage, ClientsPage, MediaPage, FAQsPage, TrainingPage,
+  PartnersPage, ClientsPage, MediaPage, FAQsPage, TrainingPage,ContactSaudiPage,
   CareersPage, ContactPage, PartnerWithUsPage, RequestQuotePage, EventDetail
 } from "@/pages/About";
 
@@ -32,6 +32,7 @@ function App() {
         <Route path="/training" element={<TrainingPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/contact-saudi" element={<ContactSaudiPage />} />
         <Route path="/partner-with-us" element={<PartnerWithUsPage />} />
         <Route path="/request-quote" element={<RequestQuotePage />} />
       </Routes>
