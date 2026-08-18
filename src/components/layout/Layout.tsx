@@ -227,14 +227,27 @@ function Header() {
               </div>
 
               {/* Contact */}
-              <Link
-                to="/contact"
-                className={`px-4 py-2.5 text-sm font-semibold rounded-lg transition-all ${
-                  location.pathname === "/contact" ? "text-[#fd6909]" : "text-[#1E2455] hover:text-[#fd6909]"
-                }`}
-              >
-                Contact
-              </Link>
+          {/* Contact */}
+<div
+  className="relative"
+  onMouseEnter={() => handleMouseEnter("contact")}
+  onMouseLeave={handleMouseLeave}
+>
+  <div
+    className={`flex items-center gap-1 px-4 py-2.5 text-sm font-semibold rounded-lg transition-all cursor-default ${
+      ["/contact", "/contact-saudi"].includes(location.pathname) || activeDropdown === "contact"
+        ? "text-[#fd6909]"
+        : "text-[#1E2455] hover:text-[#fd6909]"
+    }`}
+  >
+    Contact
+    <ChevronDown
+      className={`w-3.5 h-3.5 transition-transform duration-300 ${
+        activeDropdown === "contact" ? "rotate-180" : ""
+      }`}
+    />
+  </div>
+</div>
             </nav>
 
             {/* CTA + Mobile */}
