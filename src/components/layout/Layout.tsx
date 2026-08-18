@@ -71,8 +71,9 @@ function Header() {
     { label: "About Us", href: "/about", desc: "Our story, mission & values" },
     { label: "Clients", href: "/clients", desc: "Trusted by leading organizations" },
     { label: "Partners", href: "/partners", desc: "59+ technology partners" },
-    { label: "Media Center", href: "/media", desc: "News, events & Training" },
+    { label: "Media Center", href: "/media", desc: "News, events & press" },
     { label: "FAQs", href: "/faqs", desc: "Frequently asked questions" },
+    { label: "Training", href: "/training", desc: "Professional development courses" },
     { label: "Careers", href: "/careers", desc: "Join our growing team" },
   ];
 
@@ -216,7 +217,7 @@ function Header() {
                 <Link
                   to="/about"
                   className={`flex items-center gap-1 px-4 py-2.5 text-sm font-semibold rounded-lg transition-all ${
-                    ["/about", "/clients", "/partners", "/media", "/faqs", "/careers"].some(p => location.pathname === p) || activeDropdown === "about"
+                    ["/about", "/clients", "/partners", "/media", "/faqs", "/training", "/careers"].some(p => location.pathname === p) || activeDropdown === "about"
                       ? "text-[#fd6909]"
                       : "text-[#1E2455] hover:text-[#fd6909]"
                   }`}
@@ -226,80 +227,15 @@ function Header() {
                 </Link>
               </div>
 
-            {/* Contact */}
-<div
-  className="relative"
-  onMouseEnter={() => handleMouseEnter("contact")}
-  onMouseLeave={handleMouseLeave}
->
-  <div
-    className={`flex items-center gap-1 px-4 py-2.5 text-sm font-semibold rounded-lg transition-all cursor-default ${
-      ["/contact", "/contact-saudi"].includes(location.pathname) ||
-      activeDropdown === "contact"
-        ? "text-[#fd6909]"
-        : "text-[#1E2455] hover:text-[#fd6909]"
-    }`}
-  >
-    Contact
-
-    <ChevronDown
-      className={`w-3.5 h-3.5 transition-transform duration-300 ${
-        activeDropdown === "contact" ? "rotate-180" : ""
-      }`}
-    />
-  </div>
-
-  {/* Contact Dropdown */}
-  {activeDropdown === "contact" && (
-    <div
-      className="hidden lg:block absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white border border-gray-100 shadow-2xl shadow-black/10 rounded-xl z-50"
-      onMouseEnter={() => handleMouseEnter("contact")}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div className="p-2">
-
-        <Link
-          to="/contact"
-          className="group flex items-center gap-3 p-3 rounded-lg hover:bg-[#fd6909]/5 transition-all"
-        >
-          <div className="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-[#fd6909] flex items-center justify-center text-[#1E2455] group-hover:text-white transition-all flex-shrink-0">
-            <MapPin className="w-4 h-4" />
-          </div>
-
-          <div>
-            <span className="text-sm font-semibold text-[#1E2455] group-hover:text-[#fd6909] transition-colors block">
-              Contact Kuwait
-            </span>
-
-            <p className="text-xs text-gray-400 mt-0.5">
-              Kuwait office & service center
-            </p>
-          </div>
-        </Link>
-
-        <Link
-          to="/contact-saudi"
-          className="group flex items-center gap-3 p-3 rounded-lg hover:bg-[#fd6909]/5 transition-all"
-        >
-          <div className="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-[#fd6909] flex items-center justify-center text-[#1E2455] group-hover:text-white transition-all flex-shrink-0">
-            <MapPin className="w-4 h-4" />
-          </div>
-
-          <div>
-            <span className="text-sm font-semibold text-[#1E2455] group-hover:text-[#fd6909] transition-colors block">
-              Contact Saudi
-            </span>
-
-            <p className="text-xs text-gray-400 mt-0.5">
-              Saudi Arabia branch
-            </p>
-          </div>
-        </Link>
-
-      </div>
-    </div>
-  )}
-</div>
+              {/* Contact */}
+              <Link
+                to="/contact"
+                className={`px-4 py-2.5 text-sm font-semibold rounded-lg transition-all ${
+                  location.pathname === "/contact" ? "text-[#fd6909]" : "text-[#1E2455] hover:text-[#fd6909]"
+                }`}
+              >
+                Contact
+              </Link>
             </nav>
 
             {/* CTA + Mobile */}
@@ -505,7 +441,7 @@ function Header() {
             </div>
           </div>
         )}
-        
+
         {/* ===== MEGA MENU: ABOUT ===== */}
         {activeDropdown === "about" && (
           <div
@@ -659,6 +595,7 @@ function Footer() {
         { label: "System Integration", href: "/services/system-integration" },
         { label: "Installation", href: "/services/installation-commissioning" },
         { label: "Maintenance & Support", href: "/services/maintenance-support" },
+        { label: "Training & Certification", href: "/services/training-certification" },
         { label: "Project Management", href: "/services/project-management" },
       ],
     },
@@ -678,6 +615,7 @@ function Footer() {
       links: [
         { label: "Industries", href: "/industries" },
         { label: "FAQs", href: "/faqs" },
+        { label: "Training", href: "/training" },
         { label: "Partner With Us", href: "/partner-with-us" },
         { label: "Request a Quote", href: "/request-quote" },
         { label: "Contact Us", href: "/contact" },
@@ -716,31 +654,9 @@ function Footer() {
             <p className="text-white/50 text-sm leading-relaxed mb-6">{companyInfo.description}</p>
             <div className="space-y-3">
               <div className="flex items-start gap-2 text-white/40 text-sm">
-  <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-
-  <div className="space-y-3">
-    <div>
-      <p className="text-white/70 text-xs font-semibold uppercase tracking-wide mb-1">
-        Headquarters
-      </p>
-      <p>
-        Alsoor St, Burj Jassem, Floor 12, Kuwait
-      </p>
-    </div>
-
-    <div>
-
-      <p className="text-white/70 text-xs font-semibold uppercase tracking-wide mb-1">
-        Branch & Service Center
-      </p>
-      <p>
-        Bin Khaldoun Street, Al Bassam Complex 2,
-        <br />
-        First Floor, Hawally, Kuwait
-      </p>
-    </div>
-  </div>
-</div>
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span>{companyInfo.offices[0].address}, {companyInfo.offices[0].city}, {companyInfo.offices[0].country}</span>
+              </div>
               <a href={`tel:${companyInfo.offices[0].phone}`} className="flex items-center gap-2 text-white/40 text-sm hover:text-[#fd6909] transition-colors">
                 <Phone className="w-4 h-4" /> {companyInfo.offices[0].phone}
               </a>
