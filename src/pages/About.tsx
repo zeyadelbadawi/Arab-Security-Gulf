@@ -1916,7 +1916,21 @@ export function ContactSaudiPage() {
 
   
       </div>
+      {/* Branch & Service Center */}
+      <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#fd6909] to-[#ff8c3a] flex items-center justify-center mb-4">
+          <Building2 className="w-6 h-6 text-white" />
+        </div>
 
+        <h3 className="text-base font-bold text-[#1B2A4A]">
+          Branch & Service Center
+        </h3>
+
+        <p className="text-gray-500 text-sm mt-2 leading-relaxed">
+          Bin Khaldoun Street, Al Bassam Complex 2, First Floor, Hawally, Kuwait
+        </p>
+
+      </div>
 
       {/* Phone Card */}
       <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
