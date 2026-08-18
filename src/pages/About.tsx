@@ -1814,6 +1814,463 @@ export function ContactPage() {
   );
 }
 
+
+/* ===== CONTACT suadi ===== */
+export function ContactSaudiPage() {
+  const headquarters = companyInfo.offices.find((o) => o.type === "Headquarters");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    solution: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<null | { type: "success" | "error"; message: string }>(null);
+
+  const handleContactChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleContactSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          type: "gulf-form",
+          sheetName: "gulf form",
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to submit form");
+      }
+
+      setSubmitStatus({ type: "success", message: "Your message has been sent successfully." });
+      setFormData({ name: "", email: "", phone: "", company: "", solution: "", message: "" });
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: error instanceof Error ? error.message : "Failed to submit form",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <Layout>
+      {/* Hero with Map Background */}
+      <section className="relative">
+        {/* Full-width Map */}
+        <div className="w-full h-[400px] lg:h-[450px]">
+          <iframe
+            title="Arab Security Gulf - Suadi City Headquarters"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.5!2d47.979745!3d29.3623127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf853ff6f56413%3A0xb351a7afbb65146e!2sArab%20Security%20Gulf!5e0!3m2!1sen!2skw!4v1700000000000!5m2!1sen!2skw"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full"
+          />
+        </div>
+        {/* Overlay gradient at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#f8f9fc] to-transparent pointer-events-none" />
+      </section>
+
+      {/* Contact Info Cards - Floating over map transition */}
+      {/* Contact Info Cards - Floating over map transition */}
+<section className="relative -mt-20 z-10 pb-8">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+
+      {/* Headquarters */}
+      <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#fd6909] to-[#ff8c3a] flex items-center justify-center mb-4">
+          <Building2 className="w-6 h-6 text-white" />
+        </div>
+
+        <h3 className="text-base font-bold text-[#1B2A4A]">
+          Headquarters
+        </h3>
+
+        <p className="text-gray-500 text-sm mt-2 leading-relaxed">
+          12th Floor, Alsoor Street
+          <br />
+          Kuwait City 15000, Kuwait          
+        </p>
+
+  
+      </div>
+
+
+      {/* Phone Card */}
+      <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#fd6909] to-[#ff8c3a] flex items-center justify-center mb-4">
+          <Phone className="w-6 h-6 text-white" />
+        </div>
+
+        <h3 className="text-base font-bold text-[#1B2A4A]">
+          Call Us
+        </h3>
+
+        <p className="text-gray-500 text-sm mt-2">
+          {headquarters?.phone}
+        </p>
+
+        <p className="text-gray-400 text-xs mt-1">
+          Sun - Thu, 8:00 AM - 5:00 PM
+        </p>
+      </div>
+
+      {/* Email Card */}
+      <div className="h-full bg-white rounded-2xl p-7 shadow-xl shadow-black/5 border border-gray-100/80 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#fd6909] to-[#ff8c3a] flex items-center justify-center mb-4">
+          <Mail className="w-6 h-6 text-white" />
+        </div>
+
+        <h3 className="text-base font-bold text-[#1B2A4A]">
+          Email Us
+        </h3>
+
+        <a
+          href={`mailto:${companyInfo.email}`}
+          className="text-[#fd6909] text-sm font-medium mt-2 block hover:underline break-all"
+        >
+          {companyInfo.email}
+        </a>
+
+        <p className="text-gray-400 text-xs mt-1">
+          We reply within 24 hours
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+      {/* Main Contact Form Section */}
+      <section className="py-16 bg-[#f8f9fc]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+            {/* Left - Info Panel */}
+            <div className="lg:col-span-2 space-y-8">
+              <div>
+                <span className="text-[#fd6909] text-xs font-bold uppercase tracking-[0.2em]">Get In Touch</span>
+                <h2 className="text-3xl lg:text-4xl font-black text-[#1B2A4A] mt-3 leading-tight">
+                  Let&apos;s Discuss Your<br />
+                  <span className="text-[#fd6909]">Security Needs</span>
+                </h2>
+                <p className="text-gray-500 mt-4 leading-relaxed">
+                  Whether you need a comprehensive security system, fire safety solutions, or smart building technology — our team is ready to help you find the perfect solution.
+                </p>
+              </div>
+
+              {/* Working Hours */}
+              <div className="bg-[#1B2A4A] rounded-2xl p-6 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#fd6909]/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+                <div className="relative">
+                  <h3 className="text-white font-bold text-lg flex items-center gap-2 mb-5">
+                    <Clock className="w-5 h-5 text-[#fd6909]" /> Working Hours
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center py-2 border-b border-white/10">
+                      <span className="text-white/70 text-sm">Sunday - Thursday</span>
+                      <span className="text-white font-semibold text-sm">8:00 AM - 5:00 PM</span>
+                    </div>
+                    <div className="flex justify-between items-center py-2 border-b border-white/10">
+                      <span className="text-white/70 text-sm">Friday</span>
+                      <span className="text-red-400 font-semibold text-sm">Closed</span>
+                    </div>
+                    <div className="flex justify-between items-center py-2">
+                      <span className="text-white/70 text-sm">Saturday</span>
+                      <span className="text-red-400 font-semibold text-sm">Closed</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div>
+                <h3 className="text-[#1B2A4A] font-bold text-sm uppercase tracking-wider mb-4">Follow Us</h3>
+                <div className="flex flex-wrap gap-3">
+                  <a href={companyInfo.socialMedia.facebook || "https://facebook.com/arabsecuritygulf"} target="_blank" rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#1B2A4A] hover:bg-[#fd6909] hover:border-[#fd6909] hover:text-white transition-all duration-300 shadow-sm"
+                    title="Facebook">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href={companyInfo.socialMedia.instagram || "https://instagram.com/arabsecuritygulf"} target="_blank" rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#1B2A4A] hover:bg-[#fd6909] hover:border-[#fd6909] hover:text-white transition-all duration-300 shadow-sm"
+                    title="Instagram">
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                  <a href={companyInfo.socialMedia.linkedin || "https://linkedin.com/company/arabsecuritygulf"} target="_blank" rel="noopener noreferrer"
+                    className="w-11 h-11 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#1B2A4A] hover:bg-[#fd6909] hover:border-[#fd6909] hover:text-white transition-all duration-300 shadow-sm"
+                    title="LinkedIn">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Right - Form */}
+            <div className="lg:col-span-3">
+              <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl shadow-black/5 border border-gray-100/80">
+                <h3 className="text-xl font-bold text-[#1B2A4A] mb-1">Send Us a Message</h3>
+                <p className="text-gray-400 text-sm mb-8">Fill in the form below and we&apos;ll get back to you shortly.</p>
+
+                <form className="space-y-5" onSubmit={handleContactSubmit}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Full Name</label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleContactChange}
+                        placeholder="Enter Your Name"
+                        required
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleContactChange}
+                        placeholder="Enter Your Email"
+                        required
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all"
+                      />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Phone</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleContactChange}
+                        placeholder="+965 XXXX XXXX"
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Company</label>
+                      <input
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleContactChange}
+                        placeholder="Your Company"
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm transition-all"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Solution Interest</label>
+                    <select
+                      name="solution"
+                      value={formData.solution}
+                      onChange={handleContactChange}
+                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm text-gray-500 transition-all"
+                    >
+                      <option value="">Select a Solution</option>
+                      {solutions.map((s) => <option key={s.id} value={s.title}>{s.title}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="text-xs font-semibold text-[#1B2A4A] uppercase tracking-wider mb-2 block">Message</label>
+                    <textarea
+                      rows={5}
+                      name="message"
+                      value={formData.message}
+                      onChange={handleContactChange}
+                      placeholder="Tell us about your project requirements..."
+                      required
+                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-[#f8f9fc] focus:bg-white focus:border-[#fd6909] focus:ring-2 focus:ring-[#fd6909]/10 outline-none text-sm resize-none transition-all"
+                    />
+                  </div>
+                  {submitStatus && (
+                    <div
+                      className={`rounded-xl px-4 py-3 text-sm font-medium ${submitStatus.type === "success"
+                        ? "bg-green-50 text-green-700 border border-green-100"
+                        : "bg-red-50 text-red-700 border border-red-100"
+                        }`}
+                    >
+                      {submitStatus.message}
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-[#fd6909] to-[#ff8c3a] text-white py-4 rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-[#fd6909]/25 transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                    <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative -mt-20 z-10 pb-10">
+      <div className="max-w-7xl mx-auto px-6">
+<br></br> <br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+</div>
+</section>
+
+<section className="relative -mt-20 z-10 pb-10">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+      {/* Distribution Sector */}
+      <div className="group bg-white rounded-3xl overflow-hidden shadow-xl shadow-black/5 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+      <div className="bg-gradient-to-r from-[#1B2A4A] to-[#2d4270] p-6">
+      <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-4">
+            <Truck className="w-7 h-7 text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-white">Distribution Sector</h3>
+          <p className="text-white/80 text-sm mt-1">Sales & distribution contacts</p>
+        </div>
+
+        <div className="p-6 space-y-4">
+          {[
+            ["Doaa Hassan", "+96598850719", "doaa@arab-security.com"],
+            ["Ahmed Gamal", "+96567645862", "sales@arab-security.com"],
+            ["Ahmed Wafay", "+96594964124", "a.waffay@arab-security.com"],
+          ].map(([name, phone, email]) => (
+            <div key={email} className="p-4 rounded-2xl bg-gray-50 border border-gray-100">
+              <h4 className="font-bold text-[#1B2A4A] mb-2">{name}</h4>
+
+              <a href={`tel:${phone}`} className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#fd6909]">
+                <Phone className="w-4 h-4" />
+                {phone}
+              </a>
+
+              <a href={`mailto:${email}`} className="flex items-center gap-2 text-sm text-[#fd6909] hover:underline mt-1 break-all">
+                <Mail className="w-4 h-4" />
+                {email}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+      {/* Projects Sector */}
+      <div className="group bg-white rounded-3xl overflow-hidden shadow-xl shadow-black/5 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+      <div className="bg-gradient-to-r from-[#1B2A4A] to-[#2d4270] p-6">
+      <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-4">
+            <Briefcase className="w-7 h-7 text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-white">Projects Sector</h3>
+          <p className="text-white/80 text-sm mt-1">Project management contacts</p>
+        </div>
+
+        <div className="p-6 space-y-4">
+          {[
+            ["Tarnim Abouzeid", "+96590925367", "tarnim@arab-security.com"],
+            ["Hisham Mohamed", "+96555616101", "ahmed.fatahalla@arab-security.com"],
+            ["Hussain Elbeblawy", "+96596701447", "hussain@arab-security.com"],
+          ].map(([name, phone, email]) => (
+            <div key={email} className="p-4 rounded-2xl bg-gray-50 border border-gray-100">
+              <h4 className="font-bold text-[#1B2A4A] mb-2">{name}</h4>
+
+              <a href={`tel:${phone}`} className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#fd6909]">
+                <Phone className="w-4 h-4" />
+                {phone}
+              </a>
+
+              <a href={`mailto:${email}`} className="flex items-center gap-2 text-sm text-[#fd6909] hover:underline mt-1 break-all">
+                <Mail className="w-4 h-4" />
+                {email}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* Governmental Sector */}
+      <div className="group bg-white rounded-3xl overflow-hidden shadow-xl shadow-black/5 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+        <div className="bg-gradient-to-r from-[#1B2A4A] to-[#2d4270] p-6">
+          <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-4">
+            <Building2 className="w-7 h-7 text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-white">Governmental Sector</h3>
+          <p className="text-white/80 text-sm mt-1">Government sector contacts</p>
+        </div>
+
+        <div className="p-6 space-y-4">
+          {[
+            ["Mahmoud Ramez", "+96597716260", "m.ramez@arab-security.com"],
+            ["Hisham Mohamed", "+96555616101", "hisham.mohamed@arab-security.com"],
+          ].map(([name, phone, email]) => (
+            <div key={email} className="p-4 rounded-2xl bg-gray-50 border border-gray-100">
+              <h4 className="font-bold text-[#1B2A4A] mb-2">{name}</h4>
+
+              <a href={`tel:${phone}`} className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#fd6909]">
+                <Phone className="w-4 h-4" />
+                {phone}
+              </a>
+
+              <a href={`mailto:${email}`} className="flex items-center gap-2 text-sm text-[#fd6909] hover:underline mt-1 break-all">
+                <Mail className="w-4 h-4" />
+                {email}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      {/* CTA Banner */}
+      <section className="bg-[#1B2A4A] py-16">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-2xl lg:text-3xl font-black text-white">Need an Urgent Response?</h2>
+          <p className="text-white/60 mt-3 max-w-xl mx-auto">For emergency security support or urgent project inquiries, call us directly during working hours.</p>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href={`tel:${headquarters?.phone?.replace(/\s/g, "")}`}
+              className="bg-[#fd6909] text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#e55d00] transition-colors flex items-center gap-2">
+              <Phone className="w-4 h-4" /> Call Now: {headquarters?.phone}
+            </a>
+            <Link to="/request-quote"
+              className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-white/20 transition-colors flex items-center gap-2">
+              Request a Quote <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
+
+
 /* ===== PARTNER WITH US ===== */
 export function PartnerWithUsPage() {
   return (
