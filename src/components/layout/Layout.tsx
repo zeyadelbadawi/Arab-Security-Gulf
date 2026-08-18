@@ -226,8 +226,7 @@ function Header() {
                 </Link>
               </div>
 
-              {/* Contact */}
-          {/* Contact */}
+            {/* Contact */}
 <div
   className="relative"
   onMouseEnter={() => handleMouseEnter("contact")}
@@ -235,18 +234,71 @@ function Header() {
 >
   <div
     className={`flex items-center gap-1 px-4 py-2.5 text-sm font-semibold rounded-lg transition-all cursor-default ${
-      ["/contact", "/contact-saudi"].includes(location.pathname) || activeDropdown === "contact"
+      ["/contact", "/contact-saudi"].includes(location.pathname) ||
+      activeDropdown === "contact"
         ? "text-[#fd6909]"
         : "text-[#1E2455] hover:text-[#fd6909]"
     }`}
   >
     Contact
+
     <ChevronDown
       className={`w-3.5 h-3.5 transition-transform duration-300 ${
         activeDropdown === "contact" ? "rotate-180" : ""
       }`}
     />
   </div>
+
+  {/* Contact Dropdown */}
+  {activeDropdown === "contact" && (
+    <div
+      className="hidden lg:block absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white border border-gray-100 shadow-2xl shadow-black/10 rounded-xl z-50"
+      onMouseEnter={() => handleMouseEnter("contact")}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="p-2">
+
+        <Link
+          to="/contact"
+          className="group flex items-center gap-3 p-3 rounded-lg hover:bg-[#fd6909]/5 transition-all"
+        >
+          <div className="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-[#fd6909] flex items-center justify-center text-[#1E2455] group-hover:text-white transition-all flex-shrink-0">
+            <MapPin className="w-4 h-4" />
+          </div>
+
+          <div>
+            <span className="text-sm font-semibold text-[#1E2455] group-hover:text-[#fd6909] transition-colors block">
+              Contact Kuwait
+            </span>
+
+            <p className="text-xs text-gray-400 mt-0.5">
+              Kuwait office & service center
+            </p>
+          </div>
+        </Link>
+
+        <Link
+          to="/contact-saudi"
+          className="group flex items-center gap-3 p-3 rounded-lg hover:bg-[#fd6909]/5 transition-all"
+        >
+          <div className="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-[#fd6909] flex items-center justify-center text-[#1E2455] group-hover:text-white transition-all flex-shrink-0">
+            <MapPin className="w-4 h-4" />
+          </div>
+
+          <div>
+            <span className="text-sm font-semibold text-[#1E2455] group-hover:text-[#fd6909] transition-colors block">
+              Contact Saudi
+            </span>
+
+            <p className="text-xs text-gray-400 mt-0.5">
+              Saudi Arabia branch
+            </p>
+          </div>
+        </Link>
+
+      </div>
+    </div>
+  )}
 </div>
             </nav>
 
@@ -453,53 +505,6 @@ function Header() {
             </div>
           </div>
         )}
-
-{/* ===== DROPDOWN: CONTACT ===== */}
-{activeDropdown === "contact" && (
-  <div
-    className="hidden lg:block absolute top-full right-0 mt-2 w-64 bg-white border border-gray-100 shadow-2xl shadow-black/10 rounded-xl"
-    onMouseEnter={() => handleMouseEnter("contact")}
-    onMouseLeave={handleMouseLeave}
-  >
-    <div className="p-2">
-      <Link
-        to="/contact"
-        className="group flex items-center gap-3 p-3 rounded-lg hover:bg-[#fd6909]/5 transition-all"
-      >
-        <div className="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-[#fd6909] flex items-center justify-center text-[#1E2455] group-hover:text-white transition-all flex-shrink-0">
-          <MapPin className="w-4 h-4" />
-        </div>
-
-        <div>
-          <span className="text-sm font-semibold text-[#1E2455] group-hover:text-[#fd6909] transition-colors block">
-            Contact Kuwait
-          </span>
-          <p className="text-xs text-gray-400 mt-0.5">
-            Kuwait office & service center
-          </p>
-        </div>
-      </Link>
-
-      <Link
-        to="/contact-saudi"
-        className="group flex items-center gap-3 p-3 rounded-lg hover:bg-[#fd6909]/5 transition-all"
-      >
-        <div className="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-[#fd6909] flex items-center justify-center text-[#1E2455] group-hover:text-white transition-all flex-shrink-0">
-          <MapPin className="w-4 h-4" />
-        </div>
-
-        <div>
-          <span className="text-sm font-semibold text-[#1E2455] group-hover:text-[#fd6909] transition-colors block">
-            Contact Saudi
-          </span>
-          <p className="text-xs text-gray-400 mt-0.5">
-            Saudi Arabia branch
-          </p>
-        </div>
-      </Link>
-    </div>
-  </div>
-)}        
         
         {/* ===== MEGA MENU: ABOUT ===== */}
         {activeDropdown === "about" && (
